@@ -1,0 +1,256 @@
+{
+  "products": [
+    {
+      "id": 1,
+      "name": "PlayStation 5 Controller",
+      "category": "Gaming",
+      "brand": "Sony",
+      "description": "The DualSense wireless controller for PS5 offers immersive haptic feedback, adaptive triggers, and a built-in microphone for a next-gen gaming experience.",
+      "price": 69.99,
+      "image": "https://cdn.dummyjson.com/products/images/gaming/PlayStation%205/thumbnail.png"
+    },
+    {
+      "id": 2,
+      "name": "Xbox Series X Controller",
+      "category": "Gaming",
+      "brand": "Microsoft",
+      "description": "The Xbox Wireless Controller features a sleek design, textured grip, and seamless compatibility with Xbox and PC.",
+      "price": 59.99,
+      "image": "https://cdn.dummyjson.com/products/images/gaming/Xbox%20Series%20X/thumbnail.png"
+    },
+    {
+      "id": 3,
+      "name": "ASUS ROG Gaming Laptop",
+      "category": "Gaming",
+      "brand": "ASUS",
+      "description": "A high-performance gaming laptop with RTX 4070, 16GB RAM, and a 165Hz QHD display for ultra-smooth gameplay.",
+      "price": 1499.99,
+      "image": "https://cdn.dummyjson.com/products/images/laptops/ASUS%20ROG%20Strix%20G15/thumbnail.png"
+    },
+    {
+      "id": 4,
+      "name": "Razer Gaming Headset",
+      "category": "Gaming",
+      "brand": "Razer",
+      "description": "Surround sound gaming headset with noise-cancelling mic, THX Spatial Audio, and memory foam ear cushions.",
+      "price": 99.99,
+      "image": "https://cdn.dummyjson.com/products/images/mobile-accessories/Razer%20Kishi%20Mobile%20Game%20Controller/thumbnail.png"
+    },
+    {
+      "id": 5,
+      "name": "Men's Slim Fit Shirt",
+      "category": "Clothing",
+      "brand": "Calvin Klein",
+      "description": "A classic slim-fit dress shirt made from premium cotton blend, perfect for both casual and formal occasions.",
+      "price": 49.99,
+      "image": "https://cdn.dummyjson.com/products/images/mens-shirts/Blue%20&%20Black%20Check%20Shirt/thumbnail.png"
+    },
+    {
+      "id": 6,
+      "name": "Women's Floral Dress",
+      "category": "Clothing",
+      "brand": "H&M",
+      "description": "A lightweight floral midi dress with a wrap silhouette, ideal for spring and summer outings.",
+      "price": 39.99,
+      "image": "https://cdn.dummyjson.com/products/images/womens-dresses/Annabelle%20Dress/thumbnail.png"
+    },
+    {
+      "id": 7,
+      "name": "Women's Running Shoes",
+      "category": "Clothing",
+      "brand": "Nike",
+      "description": "Breathable mesh running shoes with responsive cushioning and a durable rubber outsole for everyday training.",
+      "price": 89.99,
+      "image": "https://cdn.dummyjson.com/products/images/womens-shoes/Nike%20Air%20Huarache%20Runner/thumbnail.png"
+    },
+    {
+      "id": 8,
+      "name": "Men's Casual Hoodie",
+      "category": "Clothing",
+      "brand": "Adidas",
+      "description": "A cozy pullover hoodie with kangaroo pocket and adjustable drawstring, available in multiple colors.",
+      "price": 54.99,
+      "image": "https://cdn.dummyjson.com/products/images/mens-shirts/Black%20Hooded%20Jacket/thumbnail.png"
+    },
+    {
+      "id": 9,
+      "name": "Essence Mascara Lash Princess",
+      "category": "Beauty",
+      "brand": "Essence",
+      "description": "A fan-favorite mascara known for its volumizing and lengthening effects. Long-lasting and cruelty-free formula.",
+      "price": 9.99,
+      "image": "https://cdn.dummyjson.com/products/images/beauty/Essence%20Mascara%20Lash%20Princess/thumbnail.png"
+    },
+    {
+      "id": 10,
+      "name": "Eyeshadow Palette with Mirror",
+      "category": "Beauty",
+      "brand": "Glamour Beauty",
+      "description": "A versatile eyeshadow palette featuring 20 richly pigmented shades from matte to shimmer, with a built-in mirror.",
+      "price": 19.99,
+      "image": "https://cdn.dummyjson.com/products/images/beauty/Eyeshadow%20Palette%20with%20Mirror/thumbnail.png"
+    },
+    {
+      "id": 11,
+      "name": "Powder Canister",
+      "category": "Beauty",
+      "brand": "L'Oreal",
+      "description": "A finely milled setting powder that minimizes pores, reduces shine, and keeps your makeup flawless all day.",
+      "price": 14.99,
+      "image": "https://cdn.dummyjson.com/products/images/beauty/Powder%20Canister/thumbnail.png"
+    },
+    {
+      "id": 12,
+      "name": "Red Lipstick",
+      "category": "Beauty",
+      "brand": "MAC",
+      "description": "A bold, creamy lipstick in classic red with long-wearing formula and a comfortable, moisturizing finish.",
+      "price": 12.99,
+      "image": "https://cdn.dummyjson.com/products/images/beauty/Red%20Lipstick/thumbnail.png"
+    },
+    {
+      "id": 13,
+      "name": "Kids' Building Blocks Set",
+      "category": "Kids",
+      "brand": "LEGO",
+      "description": "A colorful 100-piece building block set that sparks creativity and fine motor skills for children aged 3 and up.",
+      "price": 24.99,
+      "image": "https://cdn.dummyjson.com/products/images/furniture/Knoll%20Saarinen%20Executive%20Conference%20Chair/thumbnail.png"
+    },
+    {
+      "id": 14,
+      "name": "Children's Backpack",
+      "category": "Kids",
+      "brand": "Smiggle",
+      "description": "A fun and durable backpack for school-going kids, featuring padded straps, multiple compartments, and cute prints.",
+      "price": 29.99,
+      "image": "https://cdn.dummyjson.com/products/images/womens-bags/Backpack/thumbnail.png"
+    },
+    {
+      "id": 15,
+      "name": "Kids' Electric Scooter",
+      "category": "Kids",
+      "brand": "Micro",
+      "description": "A lightweight 3-wheel scooter for kids aged 2-5, with adjustable handlebar and a wide anti-slip deck.",
+      "price": 49.99,
+      "image": "https://cdn.dummyjson.com/products/images/vehicle/Electric%20Scooter/thumbnail.png"
+    },
+    {
+      "id": 16,
+      "name": "Children's Story Books Set",
+      "category": "Kids",
+      "brand": "Penguin Random House",
+      "description": "A collection of 10 beautifully illustrated bedtime story books for children aged 3-7, promoting literacy and imagination.",
+      "price": 34.99,
+      "image": "https://cdn.dummyjson.com/products/images/mobile-accessories/Anker%20Wireless%20Charger/thumbnail.png"
+    },
+    {
+      "id": 17,
+      "name": "Samsung Galaxy S23",
+      "category": "Phones",
+      "brand": "Samsung",
+      "description": "A flagship smartphone with 50MP triple camera, 8GB RAM, 256GB storage, and all-day 5G battery life.",
+      "price": 799.99,
+      "image": "https://cdn.dummyjson.com/products/images/smartphones/Samsung%20Galaxy%20S23/thumbnail.png"
+    },
+    {
+      "id": 18,
+      "name": "iPhone 15 Pro",
+      "category": "Phones",
+      "brand": "Apple",
+      "description": "Apple's most advanced iPhone with A17 Pro chip, titanium design, 48MP main camera, and USB-C connectivity.",
+      "price": 1199.99,
+      "image": "https://cdn.dummyjson.com/products/images/smartphones/iPhone%2015%20Pro/thumbnail.png"
+    },
+    {
+      "id": 19,
+      "name": "Google Pixel 8",
+      "category": "Phones",
+      "brand": "Google",
+      "description": "Google's AI-powered smartphone featuring a Tensor G3 chip, 7 years of OS updates, and an exceptional camera system.",
+      "price": 699.99,
+      "image": "https://cdn.dummyjson.com/products/images/smartphones/Google%20Pixel%208/thumbnail.png"
+    },
+    {
+      "id": 20,
+      "name": "Huawei Nova 11",
+      "category": "Phones",
+      "brand": "Huawei",
+      "description": "A slim mid-range smartphone with a 60MP front camera, OLED display, fast charging, and elegant design.",
+      "price": 449.99,
+      "image": "https://cdn.dummyjson.com/products/images/smartphones/Huawei%20Nova%208%20Pro/thumbnail.png"
+    },
+    {
+      "id": 21,
+      "name": "Apple Watch Series 9",
+      "category": "Watch",
+      "brand": "Apple",
+      "description": "Stay connected and healthy with the Apple Watch Series 9 featuring ECG, blood oxygen monitoring, and crash detection.",
+      "price": 399.99,
+      "image": "https://cdn.dummyjson.com/products/images/womens-watches/Apple%20Watch%20Series%209/thumbnail.png"
+    },
+    {
+      "id": 22,
+      "name": "Rolex Submariner",
+      "category": "Watch",
+      "brand": "Rolex",
+      "description": "An iconic luxury dive watch with Oystersteel bracelet, waterproof to 300m, and a self-winding calibre movement.",
+      "price": 13999.99,
+      "image": "https://cdn.dummyjson.com/products/images/mens-watches/Rolex%20Submariner%20Watch/thumbnail.png"
+    },
+    {
+      "id": 23,
+      "name": "Samsung Galaxy Watch 6",
+      "category": "Watch",
+      "brand": "Samsung",
+      "description": "A premium smartwatch with advanced health tracking, sleep coaching, bright AMOLED display, and long battery life.",
+      "price": 299.99,
+      "image": "https://cdn.dummyjson.com/products/images/mens-watches/Brown%20Leather%20Belt%20Watch/thumbnail.png"
+    },
+    {
+      "id": 24,
+      "name": "Casio G-Shock",
+      "category": "Watch",
+      "brand": "Casio",
+      "description": "A rugged, shock-resistant digital watch built for outdoor adventures, featuring world time, stopwatch, and LED backlight.",
+      "price": 89.99,
+      "image": "https://cdn.dummyjson.com/products/images/mens-watches/Fossil%20Blue%20Dial%20Stainless%20Steel%20Watch/thumbnail.png"
+    },
+    {
+      "id": 25,
+      "name": "Hardcover Notebook A5",
+      "category": "Stationary",
+      "brand": "Moleskine",
+      "description": "A premium A5 hardcover ruled notebook with 240 pages, an elastic closure band, and an expandable inner pocket.",
+      "price": 18.99,
+      "image": "https://cdn.dummyjson.com/products/images/mobile-accessories/Apple%20USB-C%20to%203.5mm/thumbnail.png"
+    },
+    {
+      "id": 26,
+      "name": "Ballpoint Pen Set",
+      "category": "Stationary",
+      "brand": "Pilot",
+      "description": "A 12-pack of smooth-writing ballpoint pens in assorted colors with comfortable rubber grip for long writing sessions.",
+      "price": 8.99,
+      "image": "https://cdn.dummyjson.com/products/images/mobile-accessories/Anker%20USB-C%20Hub/thumbnail.png"
+    },
+    {
+      "id": 27,
+      "name": "Watercolor Paint Set",
+      "category": "Stationary",
+      "brand": "Faber-Castell",
+      "description": "A professional 24-color watercolor paint set with vibrant, highly pigmented cakes and a dual-sided brush included.",
+      "price": 22.99,
+      "image": "https://cdn.dummyjson.com/products/images/beauty/Eyeshadow%20Palette%20with%20Mirror/thumbnail.png"
+    },
+    {
+      "id": 28,
+      "name": "Desk Organizer Set",
+      "category": "Stationary",
+      "brand": "IKEA",
+      "description": "A stylish 5-piece bamboo desk organizer set including pen holder, paper tray, sticky note dispenser, and more.",
+      "price": 34.99,
+      "image": "https://cdn.dummyjson.com/products/images/furniture/Bedside%20Table%20African%20Walnut/thumbnail.png"
+    }
+  ]
+}
