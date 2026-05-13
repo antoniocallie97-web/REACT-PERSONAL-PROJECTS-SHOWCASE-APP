@@ -3,29 +3,32 @@ import ProductPage from "../components/ProductPage";
 import SearchBar from "../components/SearchBar";
 
 
-function Shop() {
-  return (
-    <ProductPage />
-  )
+// Incoming code from main branch
+function Shop({ onAddToCart }) {
   const [products, setProducts] = useState([]);
-  const [searchTerm, setSearchTerm] = useState("");
+  const [filteredProducts, setFilteredProducts] = useState([]);
 
   useEffect(() => {
+    // Keep both lists: original products for filter options, filtered products for display.
     fetch("http://localhost:3001/products")
       .then((r) => r.json())
-      .then(setProducts);
+      .then((data) => {
+        setProducts(data);
+        setFilteredProducts(data);
+      });
   }, []);
-
-  const filtered = products.filter((p) =>
-    p.name.toLowerCase().includes(searchTerm.toLowerCase())
-  );
 
   return (
     <div>
-      <SearchBar searchTerm={searchTerm} onSearch={setSearchTerm} />
+      {/* Shop uses the default price filters. */}
+      <SearchBar products={products} onFilter={setFilteredProducts} />
       <div className="product-grid">
-        {filtered.map((product) => (
-          <ProductPage key={product.id} product={product} />
+        {filteredProducts.map((product) => (
+          <ProductPage
+            key={product.id}
+            product={product}
+            onAddToCart={onAddToCart}
+          />
         ))}
       </div>
     </div>
