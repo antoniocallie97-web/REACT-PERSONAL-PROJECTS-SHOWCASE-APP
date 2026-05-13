@@ -3,6 +3,7 @@ import FormPage from "../components/FormPage";
 import ProductPage from "../components/ProductPage";
 import SearchBar from "../components/SearchBar";
 
+
 function AdminPortal() {
   const [products, setProducts] = useState([]);
   const [searchTerm, setSearchTerm] = useState("");
