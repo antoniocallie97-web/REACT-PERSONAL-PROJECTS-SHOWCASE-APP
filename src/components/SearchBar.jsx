@@ -16,6 +16,7 @@ function SearchBar({ products, onFilter, filterMode = "price" }) {
     return ["All", ...new Set(productCategories)];
   }, [productList]);
 
+  // The same search bar supports customer price filters and admin status filters.
   const filters =
     filterMode === "admin"
       ? ["All", "In Stock", "Best Selling", "Discount"]
@@ -38,6 +39,7 @@ function SearchBar({ products, onFilter, filterMode = "price" }) {
       );
     }
 
+    // Admin filters depend on optional product fields, ready for richer product data.
     if (priceFilterValue === "Under $50") {
       filteredProducts = filteredProducts.filter((product) => product.price < 50);
     } else if (priceFilterValue === "$50 - $100") {

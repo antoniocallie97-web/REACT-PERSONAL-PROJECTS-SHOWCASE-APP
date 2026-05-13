@@ -9,6 +9,7 @@ import Cart from './components/Cart'
 import './App.css'
 
 function App() {
+  // Keep cart state here so Shop can add items and Cart can edit them.
   const [cartItems, setCartItems] = useState([]);
 
   function handleAddToCart(product) {
@@ -50,6 +51,7 @@ function App() {
 
   return (
     <>
+      {/* Navbar only receives the count; the cart item data stays in App. */}
       <Navbar cartCount={cartItems.reduce((total, item) => total + item.quantity, 0)} />
       <Routes>
         <Route path='/' element={<Home />} />

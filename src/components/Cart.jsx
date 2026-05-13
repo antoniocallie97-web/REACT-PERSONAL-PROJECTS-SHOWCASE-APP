@@ -1,4 +1,5 @@
 function Cart({ items = [], onUpdateQuantity, onRemoveItem, onClearCart }) {
+  // Quantity is stored on each cart item, so totals are calculated from item price.
   const subtotal = items.reduce(
     (total, item) => total + item.price * item.quantity,
     0
@@ -35,6 +36,7 @@ function Cart({ items = [], onUpdateQuantity, onRemoveItem, onClearCart }) {
               <strong>${item.price}</strong>
             </div>
 
+            {/* Setting quantity below 1 removes the item in App.jsx. */}
             <div className="cart-quantity">
               <button
                 type="button"

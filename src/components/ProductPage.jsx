@@ -1,6 +1,7 @@
 import { useEffect, useState } from "react";
 
 function getFallbackImage(product) {
+  // Use a generated placeholder if a product image URL fails or is missing.
   const label = encodeURIComponent(product?.name || "Product image");
   return `https://dummyjson.com/image/420x300/e5e7eb/111827?text=${label}`;
 }
@@ -11,6 +12,7 @@ function ProductCard({ product, onAddToCart }) {
   const [imageLoaded, setImageLoaded] = useState(false);
 
   const handleImageError = () => {
+    // Try the fallback once, then stop showing the loader.
     if (imageSrc !== fallbackImage) {
       setImageSrc(fallbackImage);
       setImageLoaded(false);
@@ -69,6 +71,7 @@ function ProductPage({ product, onAddToCart }) {
   const [error, setError] = useState("");
 
   useEffect(() => {
+    // When a product is passed in, this component is being used as a single card.
     if (product) return;
 
     fetch("http://localhost:3001/products")

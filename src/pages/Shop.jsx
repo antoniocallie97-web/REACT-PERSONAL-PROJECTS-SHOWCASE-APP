@@ -7,6 +7,7 @@ function Shop({ onAddToCart }) {
   const [filteredProducts, setFilteredProducts] = useState([]);
 
   useEffect(() => {
+    // Keep both lists: original products for filter options, filtered products for display.
     fetch("http://localhost:3001/products")
       .then((r) => r.json())
       .then((data) => {
@@ -17,6 +18,7 @@ function Shop({ onAddToCart }) {
 
   return (
     <div>
+      {/* Shop uses the default price filters. */}
       <SearchBar products={products} onFilter={setFilteredProducts} />
       <div className="product-grid">
         {filteredProducts.map((product) => (

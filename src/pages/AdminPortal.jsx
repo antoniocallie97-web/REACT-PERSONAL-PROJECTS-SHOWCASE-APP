@@ -8,6 +8,7 @@ function AdminPortal() {
   const [filteredProducts, setFilteredProducts] = useState([]);
 
   useEffect(() => {
+    // Keep a master list plus a filtered list so admin filters do not lose data.
     fetch("http://localhost:3001/products")
       .then((r) => r.json())
       .then((data) => {
@@ -16,13 +17,13 @@ function AdminPortal() {
       });
   }, []);
 
-  // POST=> Called by FormPage after a successful submission 
+  // POST=> Called by FormPage after a successful submission.
   function handleAddProduct(newProduct) {
     setProducts((prev) => [...prev, newProduct]);
     setFilteredProducts((prev) => [...prev, newProduct]);
   }
 
-  //PATCH=> Called by ProductPage when admin edits a field 
+  // PATCH=> Called by ProductPage when admin edits a field.
   function handleUpdateProduct(updatedProduct) {
     setProducts((prev) =>
       prev.map((p) => (p.id === updatedProduct.id ? updatedProduct : p))
@@ -42,6 +43,7 @@ function AdminPortal() {
     <div>
       <h1>Admin Portal</h1>
       <FormPage onAdd={handleAddProduct} />
+      {/* Admin mode swaps price filters for stock/status filters. */}
       <SearchBar
         products={products}
         onFilter={setFilteredProducts}

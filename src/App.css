@@ -1,4 +1,4 @@
-/* product card styling */
+/* Product card styling */
 .product-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
@@ -109,7 +109,7 @@
     transform: rotate(360deg);
   }
 }
-/* Searchbar styling */
+/* Search and filter toolbar shared by Shop and Admin. */
 .search-wrapper {
   display: flex;
   flex-wrap: wrap;
@@ -185,6 +185,7 @@
   font-size: 14px;
 }
 
+/* Cart page layout and item controls. */
 .cart-page {
   padding: 24px;
   text-align: left;
@@ -288,6 +289,7 @@
   font-size: 20px;
 }
 
+/* Stack controls and cart rows on smaller screens. */
 @media (max-width: 720px) {
   .search-wrapper {
     display: grid;
@@ -319,6 +321,7 @@
   }
 }
 
+/* Keep image loaders, prices, and controls readable in dark mode. */
 @media (prefers-color-scheme: dark) {
   .product-image-wrap {
     background: #20222b;
