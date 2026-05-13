@@ -7,7 +7,7 @@
       "brand": "Sony",
       "description": "The DualSense wireless controller for PS5 offers immersive haptic feedback, adaptive triggers, and a built-in microphone for a next-gen gaming experience.",
       "price": 69.99,
-      "image": "https://cdn.dummyjson.com/products/images/gaming/PlayStation%205/thumbnail.png"
+      "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Playstation%20DualSense%20Controller.png?width=800"
     },
     {
       "id": 2,
@@ -16,7 +16,7 @@
       "brand": "Microsoft",
       "description": "The Xbox Wireless Controller features a sleek design, textured grip, and seamless compatibility with Xbox and PC.",
       "price": 59.99,
-      "image": "https://cdn.dummyjson.com/products/images/gaming/Xbox%20Series%20X/thumbnail.png"
+      "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Xbox%20Wireless%20Controller%20Carbon%20Black.jpg?width=800"
     },
     {
       "id": 3,
@@ -25,7 +25,7 @@
       "brand": "ASUS",
       "description": "A high-performance gaming laptop with RTX 4070, 16GB RAM, and a 165Hz QHD display for ultra-smooth gameplay.",
       "price": 1499.99,
-      "image": "https://cdn.dummyjson.com/products/images/laptops/ASUS%20ROG%20Strix%20G15/thumbnail.png"
+      "image": "https://commons.wikimedia.org/wiki/Special:FilePath/ASUS%20ROG%20Strix%20G15%20%28G513QY-HQ012T%29-front%20oblique%20PNr%C2%B00884.jpg?width=800"
     },
     {
       "id": 4,
@@ -34,7 +34,7 @@
       "brand": "Razer",
       "description": "Surround sound gaming headset with noise-cancelling mic, THX Spatial Audio, and memory foam ear cushions.",
       "price": 99.99,
-      "image": "https://cdn.dummyjson.com/products/images/mobile-accessories/Razer%20Kishi%20Mobile%20Game%20Controller/thumbnail.png"
+      "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Sound%20BlasterX%20H5%20Gaming%20Headset.jpg?width=800"
     },
     {
       "id": 5,
@@ -52,7 +52,7 @@
       "brand": "H&M",
       "description": "A lightweight floral midi dress with a wrap silhouette, ideal for spring and summer outings.",
       "price": 39.99,
-      "image": "https://cdn.dummyjson.com/products/images/womens-dresses/Annabelle%20Dress/thumbnail.png"
+      "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Floral%20Dress%20with%20Back%20Cutouts%20%2817250719865%29.jpg?width=800"
     },
     {
       "id": 7,
@@ -61,7 +61,7 @@
       "brand": "Nike",
       "description": "Breathable mesh running shoes with responsive cushioning and a durable rubber outsole for everyday training.",
       "price": 89.99,
-      "image": "https://cdn.dummyjson.com/products/images/womens-shoes/Nike%20Air%20Huarache%20Runner/thumbnail.png"
+      "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Running%20shoes.jpg?width=800"
     },
     {
       "id": 8,
@@ -70,7 +70,7 @@
       "brand": "Adidas",
       "description": "A cozy pullover hoodie with kangaroo pocket and adjustable drawstring, available in multiple colors.",
       "price": 54.99,
-      "image": "https://cdn.dummyjson.com/products/images/mens-shirts/Black%20Hooded%20Jacket/thumbnail.png"
+      "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Hoodie%20man.jpg?width=800"
     },
     {
       "id": 9,
@@ -115,7 +115,7 @@
       "brand": "LEGO",
       "description": "A colorful 100-piece building block set that sparks creativity and fine motor skills for children aged 3 and up.",
       "price": 24.99,
-      "image": "https://cdn.dummyjson.com/products/images/furniture/Knoll%20Saarinen%20Executive%20Conference%20Chair/thumbnail.png"
+      "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Lego%20bricks.jpg?width=800"
     },
     {
       "id": 14,
@@ -124,7 +124,7 @@
       "brand": "Smiggle",
       "description": "A fun and durable backpack for school-going kids, featuring padded straps, multiple compartments, and cute prints.",
       "price": 29.99,
-      "image": "https://cdn.dummyjson.com/products/images/womens-bags/Backpack/thumbnail.png"
+      "image": "https://commons.wikimedia.org/wiki/Special:FilePath/School%20bag%20backpack.jpg?width=800"
     },
     {
       "id": 15,
@@ -133,7 +133,7 @@
       "brand": "Micro",
       "description": "A lightweight 3-wheel scooter for kids aged 2-5, with adjustable handlebar and a wide anti-slip deck.",
       "price": 49.99,
-      "image": "https://cdn.dummyjson.com/products/images/vehicle/Electric%20Scooter/thumbnail.png"
+      "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Boy%20on%20electric%20scooter%205988226382%20e289654724%20z.jpg?width=800"
     },
     {
       "id": 16,
@@ -142,7 +142,7 @@
       "brand": "Penguin Random House",
       "description": "A collection of 10 beautifully illustrated bedtime story books for children aged 3-7, promoting literacy and imagination.",
       "price": 34.99,
-      "image": "https://cdn.dummyjson.com/products/images/mobile-accessories/Anker%20Wireless%20Charger/thumbnail.png"
+      "image": "https://commons.wikimedia.org/wiki/Special:FilePath/ASC%20Leiden%20-%20Rwanda%202021%20-%20106%20-%20Children%27s%20books%20-%20Kigali.jpg?width=800"
     },
     {
       "id": 17,
@@ -151,7 +151,7 @@
       "brand": "Samsung",
       "description": "A flagship smartphone with 50MP triple camera, 8GB RAM, 256GB storage, and all-day 5G battery life.",
       "price": 799.99,
-      "image": "https://cdn.dummyjson.com/products/images/smartphones/Samsung%20Galaxy%20S23/thumbnail.png"
+      "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Galaxy%20S23.png?width=800"
     },
     {
       "id": 18,
@@ -160,7 +160,7 @@
       "brand": "Apple",
       "description": "Apple's most advanced iPhone with A17 Pro chip, titanium design, 48MP main camera, and USB-C connectivity.",
       "price": 1199.99,
-      "image": "https://cdn.dummyjson.com/products/images/smartphones/iPhone%2015%20Pro/thumbnail.png"
+      "image": "https://commons.wikimedia.org/wiki/Special:FilePath/IPhone%2015%20pro.png?width=800"
     },
     {
       "id": 19,
@@ -169,7 +169,7 @@
       "brand": "Google",
       "description": "Google's AI-powered smartphone featuring a Tensor G3 chip, 7 years of OS updates, and an exceptional camera system.",
       "price": 699.99,
-      "image": "https://cdn.dummyjson.com/products/images/smartphones/Google%20Pixel%208/thumbnail.png"
+      "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Google%20Pixel%208%20Rose%20front.jpg?width=800"
     },
     {
       "id": 20,
@@ -178,7 +178,7 @@
       "brand": "Huawei",
       "description": "A slim mid-range smartphone with a 60MP front camera, OLED display, fast charging, and elegant design.",
       "price": 449.99,
-      "image": "https://cdn.dummyjson.com/products/images/smartphones/Huawei%20Nova%208%20Pro/thumbnail.png"
+      "image": "https://www.gsmarena.com.bd/images/products/Huawei-Nova-11.jpg"
     },
     {
       "id": 21,
@@ -187,7 +187,7 @@
       "brand": "Apple",
       "description": "Stay connected and healthy with the Apple Watch Series 9 featuring ECG, blood oxygen monitoring, and crash detection.",
       "price": 399.99,
-      "image": "https://cdn.dummyjson.com/products/images/womens-watches/Apple%20Watch%20Series%209/thumbnail.png"
+      "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Apple%20Watch%20Series%209%201%202023-11-14.jpg?width=800"
     },
     {
       "id": 22,
@@ -214,7 +214,7 @@
       "brand": "Casio",
       "description": "A rugged, shock-resistant digital watch built for outdoor adventures, featuring world time, stopwatch, and LED backlight.",
       "price": 89.99,
-      "image": "https://cdn.dummyjson.com/products/images/mens-watches/Fossil%20Blue%20Dial%20Stainless%20Steel%20Watch/thumbnail.png"
+      "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Casio%20G-Shock%20Master%20of%20G%20Rangeman%20GW-9400J-1JF.jpg?width=800"
     },
     {
       "id": 25,
@@ -223,7 +223,7 @@
       "brand": "Moleskine",
       "description": "A premium A5 hardcover ruled notebook with 240 pages, an elastic closure band, and an expandable inner pocket.",
       "price": 18.99,
-      "image": "https://cdn.dummyjson.com/products/images/mobile-accessories/Apple%20USB-C%20to%203.5mm/thumbnail.png"
+      "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Moleskine%20Ruled%20Pocket%20Notebook%20%28430657949%29.jpg?width=800"
     },
     {
       "id": 26,
@@ -232,7 +232,7 @@
       "brand": "Pilot",
       "description": "A 12-pack of smooth-writing ballpoint pens in assorted colors with comfortable rubber grip for long writing sessions.",
       "price": 8.99,
-      "image": "https://cdn.dummyjson.com/products/images/mobile-accessories/Anker%20USB-C%20Hub/thumbnail.png"
+      "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Pentel%20RSVP%20pens.JPG?width=800"
     },
     {
       "id": 27,
@@ -250,7 +250,7 @@
       "brand": "IKEA",
       "description": "A stylish 5-piece bamboo desk organizer set including pen holder, paper tray, sticky note dispenser, and more.",
       "price": 34.99,
-      "image": "https://cdn.dummyjson.com/products/images/furniture/Bedside%20Table%20African%20Walnut/thumbnail.png"
+      "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Gather%2C%20The%20minimal%2C%20modular%20organizer.%20%28Unsplash%29.jpg?width=800"
     }
   ]
 }

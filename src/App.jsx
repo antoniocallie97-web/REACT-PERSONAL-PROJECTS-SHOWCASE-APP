@@ -3,6 +3,7 @@ import Navbar from './components/Navbar'
 import Home from './pages/Home'
 import Shop from './pages/Shop'
 import Admin from './pages/AdminPortal'
+import ProductPage from './components/ProductPage'
 import './App.css'
 
 function App() {
@@ -13,6 +14,7 @@ function App() {
         <Route path='/' element={<Home />} />
         <Route path='/Shop' element={<Shop />} />
         <Route path='/Admin' element={<Admin />} />
+        <Route path='/products' element={<ProductPage />} />
       </Routes>
     </>
   )

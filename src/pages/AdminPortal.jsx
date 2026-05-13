@@ -33,6 +33,7 @@ function AdminPortal() {
   const filtered = products.filter((p) =>
     p.name.toLowerCase().includes(searchTerm.toLowerCase())
   );
+
   return (
     <div>
       <h1>Admin Portal</h1>
