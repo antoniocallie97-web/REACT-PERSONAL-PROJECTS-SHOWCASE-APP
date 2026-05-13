@@ -5,7 +5,7 @@ function getFallbackImage(product) {
   return `https://dummyjson.com/image/420x300/e5e7eb/111827?text=${label}`;
 }
 
-function ProductCard({ product }) {
+function ProductCard({ product, onAddToCart }) {
   const fallbackImage = getFallbackImage(product);
   const [imageSrc, setImageSrc] = useState(product.image || fallbackImage);
   const [imageLoaded, setImageLoaded] = useState(false);
@@ -50,15 +50,21 @@ function ProductCard({ product }) {
           ${product.price}
         </p>
 
-        <button className="product-button">
-          Add to Cart
-        </button>
+        {onAddToCart && (
+          <button
+            className="product-button"
+            onClick={() => onAddToCart(product)}
+            type="button"
+          >
+            Add to Cart
+          </button>
+        )}
       </div>
     </div>
   );
 }
 
-function ProductPage({ product }) {
+function ProductPage({ product, onAddToCart }) {
   const [products, setProducts] = useState([]);
   const [error, setError] = useState("");
 
@@ -75,7 +81,13 @@ function ProductPage({ product }) {
   }, [product]);
 
   if (product) {
-    return <ProductCard key={`${product.id}-${product.image}`} product={product} />;
+    return (
+      <ProductCard
+        key={`${product.id}-${product.image}`}
+        product={product}
+        onAddToCart={onAddToCart}
+      />
+    );
   }
 
   if (error) {
@@ -85,7 +97,11 @@ function ProductPage({ product }) {
   return (
     <div className="product-grid">
       {products.map((product) => (
-        <ProductCard key={`${product.id}-${product.image}`} product={product} />
+        <ProductCard
+          key={`${product.id}-${product.image}`}
+          product={product}
+          onAddToCart={onAddToCart}
+        />
       ))}
     </div>
   );

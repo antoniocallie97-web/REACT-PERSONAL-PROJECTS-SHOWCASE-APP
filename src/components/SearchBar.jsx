@@ -1,95 +1,98 @@
-import { useState } from "react";
+import { useMemo, useState } from "react";
 
-function SearchBar({ products, onFilter }) {
+function SearchBar({ products, onFilter, filterMode = "price" }) {
   const [search, setSearch] = useState("");
   const [category, setCategory] = useState("All");
-  const [filter, setFilter] = useState("All");
+  const [priceFilter, setPriceFilter] = useState("All");
   const [notification, setNotification] = useState("");
 
-  const categories = [
-    "All",
-    "Watches",
-    "Phones",
-    "Stationery",
-    "Kids",
-    "Beauty",
-    "Clothing",
-    "Gaming",
-  ];
+  const productList = useMemo(() => products || [], [products]);
 
-  const filters = [
-    "All",
-    "In Stock",
-    "On Sale",
-    "New Arrivals",
-    "Best Sellers",
-  ];
+  const categories = useMemo(() => {
+    const productCategories = productList
+      .map((product) => product.category)
+      .filter(Boolean);
 
-  // MAIN FILTER FUNCTION
-  const handleFiltering = (searchValue, categoryValue, filterValue) => {
-    let filteredProducts = [...products];
+    return ["All", ...new Set(productCategories)];
+  }, [productList]);
 
-    // SEARCH FILTER
+  const filters =
+    filterMode === "admin"
+      ? ["All", "In Stock", "Best Selling", "Discount"]
+      : ["All", "Under $50", "$50 - $100", "Over $100"];
+
+  const handleFiltering = (searchValue, categoryValue, priceFilterValue) => {
+    let filteredProducts = [...productList];
+
     if (searchValue.trim() !== "") {
       filteredProducts = filteredProducts.filter((product) =>
         product.name
-          .toLowerCase()
+          ?.toLowerCase()
           .includes(searchValue.toLowerCase())
       );
     }
 
-    // CATEGORY FILTER (IMPORTANT FIX)
     if (categoryValue !== "All") {
       filteredProducts = filteredProducts.filter((product) =>
-        product.category
-          ?.toLowerCase()
-          .includes(categoryValue.toLowerCase())
+        product.category === categoryValue
       );
     }
 
-    // EXTRA FILTER
-    if (filterValue !== "All") {
+    if (priceFilterValue === "Under $50") {
+      filteredProducts = filteredProducts.filter((product) => product.price < 50);
+    } else if (priceFilterValue === "$50 - $100") {
       filteredProducts = filteredProducts.filter(
-        (product) => product.filter === filterValue
+        (product) => product.price >= 50 && product.price <= 100
+      );
+    } else if (priceFilterValue === "Over $100") {
+      filteredProducts = filteredProducts.filter((product) => product.price > 100);
+    } else if (priceFilterValue === "In Stock") {
+      filteredProducts = filteredProducts.filter(
+        (product) => product.inStock !== false && product.stock !== 0
+      );
+    } else if (priceFilterValue === "Best Selling") {
+      filteredProducts = filteredProducts.filter(
+        (product) => product.bestSelling || product.bestSeller || product.isBestSelling
+      );
+    } else if (priceFilterValue === "Discount") {
+      filteredProducts = filteredProducts.filter(
+        (product) =>
+          product.discount ||
+          product.onSale ||
+          Number(product.discountPercentage) > 0
       );
     }
 
-    // EMPTY SEARCH STATE
-    if (searchValue.trim() === "") {
-      setNotification("🔍 Start typing to search products...");
-    }
+    setNotification(
+      searchValue.trim() !== "" && filteredProducts.length === 0
+        ? "Product not found"
+        : ""
+    );
 
-    // ❌ NOT FOUND STATE (FIXED LOGIC)
-    else if (filteredProducts.length === 0) {
-      setNotification("❌ Product Not Found");
-    }
-
-    // CLEAR MESSAGE
-    else {
-      setNotification("");
-    }
-
-    onFilter(filteredProducts);
+    onFilter?.(filteredProducts);
   };
 
-  // SEARCH BUTTON
+  const handleSearchChange = (value) => {
+    setSearch(value);
+    handleFiltering(value, category, priceFilter);
+  };
+
   const handleSearchClick = () => {
-    handleFiltering(search, category, filter);
+    handleFiltering(search, category, priceFilter);
   };
 
   return (
     <div className="search-wrapper">
 
-      {/* SEARCH BAR */}
       <div className="search-section">
-        <h2>🛍 Shop Products</h2>
+        <h2>Shop Products</h2>
 
         <div className="search-box">
           <input
             type="text"
             placeholder="Search products..."
             value={search}
-            onChange={(e) => setSearch(e.target.value)}
+            onChange={(e) => handleSearchChange(e.target.value)}
             className="search-input"
           />
 
@@ -102,15 +105,14 @@ function SearchBar({ products, onFilter }) {
         </div>
       </div>
 
-      {/* CATEGORY FILTER */}
       <div className="categories-section">
-        <h3>📂 Categories</h3>
+        <h3>Categories</h3>
 
         <select
           value={category}
           onChange={(e) => {
             setCategory(e.target.value);
-            handleFiltering(search, e.target.value, filter);
+            handleFiltering(search, e.target.value, priceFilter);
           }}
           className="select-box"
         >
@@ -122,14 +124,13 @@ function SearchBar({ products, onFilter }) {
         </select>
       </div>
 
-      {/* FILTER SECTION */}
       <div className="filters-section">
-        <h3>⚙ Filters</h3>
+        <h3>Filter</h3>
 
         <select
-          value={filter}
+          value={priceFilter}
           onChange={(e) => {
-            setFilter(e.target.value);
+            setPriceFilter(e.target.value);
             handleFiltering(search, category, e.target.value);
           }}
           className="select-box"
@@ -142,7 +143,6 @@ function SearchBar({ products, onFilter }) {
         </select>
       </div>
 
-      {/* NOTIFICATIONS */}
       {notification && (
         <p className="notification-message">
           {notification}
