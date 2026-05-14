@@ -469,7 +469,6 @@ body {
 /* NAVBAR 
 /* Color Palette & Themes */
 :root[data-theme='dark'] {
-  --bg-color: #1a0633; /* Deep Violet */
   --nav-bg: rgba(26, 6, 51, 0.85);
   --text-primary: #ffffff;
   --accent: #FF8C00;
