@@ -42,7 +42,6 @@ function AdminPortal() {
 
   return (
     <div>
-      <h1>Admin Portal</h1>
       <FormPage onAdd={handleAddProduct} />
       {/* Admin mode swaps price filters for stock/status filters. */}
       <SearchBar
@@ -50,7 +49,8 @@ function AdminPortal() {
         onFilter={setFilteredProducts}
         filterMode="admin"
       />
-      <div className="product-grid">
+      <div className="grid-container">
+
         {filteredProducts.map((product) => (
           <ProductPage
             key={product.id}

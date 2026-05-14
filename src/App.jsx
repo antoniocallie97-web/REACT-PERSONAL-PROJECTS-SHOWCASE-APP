@@ -1,5 +1,5 @@
-import { useState } from 'react'
-import { Routes, Route } from 'react-router-dom'
+import { useState , useEffect } from 'react'
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom'
 import Navbar from './components/Navbar'
 import Home from './pages/Home'
 import Shop from './pages/Shop'
@@ -50,33 +50,48 @@ function App() {
     setCartItems([]);
   }
 
+  const [theme, setTheme] = useState('dark');
+
+  // This effect ensures the CSS variable changes globally when 'theme' updates
+  useEffect(() => {
+    document.documentElement.setAttribute('data-theme', theme);
+  }, [theme]);
+
+  const toggleTheme = () => setTheme(prev => (prev === 'dark' ? 'light' : 'dark'));
+
+ 
   return (
     <>
-      {/* Navbar only receives the count; the cart item data stays in App. */}
-      <Navbar cartCount={cartItems.reduce((total, item) => total + item.quantity, 0)} />
-      <Routes>
 
-        <Route path='/' element={<LandingPage />} />
-        <Route path='/Shop' element={<Shop />} />
-{/* 
-        <Route path='/' element={<Home />} />
-        <Route path='/Shop' element={<Shop onAddToCart={handleAddToCart} />} /> */}
-        <Route path='/Admin' element={<Admin />} />
-        <Route
-          path='/Cart'
-          element={
-            <Cart
-              items={cartItems}
-              onUpdateQuantity={handleUpdateCartItem}
-              onRemoveItem={handleRemoveCartItem}
-              onClearCart={handleClearCart}
+      {/* Navbar only receives the count; the cart item data stays in App. */}
+      <div className="app-wrapper">
+
+          <Navbar theme={theme} toggleTheme={toggleTheme} />
+          <Navbar cartCount={cartItems.reduce((total, item) => total + item.quantity, 0)} />
+          <Routes>
+
+            <Route path='/' element={<LandingPage />} />
+            <Route path='/Shop' element={<Shop />} />
+
+            <Route path='/' element={<Home />} />
+            <Route path='/Shop' element={<Shop onAddToCart={handleAddToCart} />} />
+            <Route path='/Admin' element={<Admin />} />
+            <Route
+              path='/Cart'
+              element={
+              <Cart
+                items={cartItems}
+                onUpdateQuantity={handleUpdateCartItem}
+                onRemoveItem={handleRemoveCartItem}
+                onClearCart={handleClearCart}
+              />
+            }
             />
-          }
-        />
-        <Route path='/products' element={<ProductPage onAddToCart={handleAddToCart} />} />
-      </Routes>
+            <Route path='/products' element={<ProductPage onAddToCart={handleAddToCart} />} />
+          </Routes>
+    
+      </div>
     </>
   )
 }
-
 export default App
