@@ -1,7 +1,7 @@
 {
   "products": [
     {
-      "id": 1,
+      "id": "1",
       "name": "PlayStation 5 Controller",
       "category": "Gaming",
       "brand": "Sony",
@@ -10,7 +10,7 @@
       "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Playstation%20DualSense%20Controller.png?width=800"
     },
     {
-      "id": 2,
+      "id": "2",
       "name": "Xbox Series X Controller",
       "category": "Gaming",
       "brand": "Microsoft",
@@ -19,7 +19,7 @@
       "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Xbox%20Wireless%20Controller%20Carbon%20Black.jpg?width=800"
     },
     {
-      "id": 3,
+      "id": "3",
       "name": "ASUS ROG Gaming Laptop",
       "category": "Gaming",
       "brand": "ASUS",
@@ -28,7 +28,7 @@
       "image": "https://commons.wikimedia.org/wiki/Special:FilePath/ASUS%20ROG%20Strix%20G15%20%28G513QY-HQ012T%29-front%20oblique%20PNr%C2%B00884.jpg?width=800"
     },
     {
-      "id": 4,
+      "id": "4",
       "name": "Razer Gaming Headset",
       "category": "Gaming",
       "brand": "Razer",
@@ -37,7 +37,7 @@
       "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Sound%20BlasterX%20H5%20Gaming%20Headset.jpg?width=800"
     },
     {
-      "id": 5,
+      "id": "5",
       "name": "Men's Slim Fit Shirt",
       "category": "Clothing",
       "brand": "Calvin Klein",
@@ -46,7 +46,7 @@
       "image": "https://cdn.dummyjson.com/products/images/mens-shirts/Blue%20&%20Black%20Check%20Shirt/thumbnail.png"
     },
     {
-      "id": 6,
+      "id": "6",
       "name": "Women's Floral Dress",
       "category": "Clothing",
       "brand": "H&M",
@@ -55,7 +55,7 @@
       "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Floral%20Dress%20with%20Back%20Cutouts%20%2817250719865%29.jpg?width=800"
     },
     {
-      "id": 7,
+      "id": "7",
       "name": "Women's Running Shoes",
       "category": "Clothing",
       "brand": "Nike",
@@ -64,7 +64,7 @@
       "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Running%20shoes.jpg?width=800"
     },
     {
-      "id": 8,
+      "id": "8",
       "name": "Men's Casual Hoodie",
       "category": "Clothing",
       "brand": "Adidas",
@@ -73,7 +73,7 @@
       "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Hoodie%20man.jpg?width=800"
     },
     {
-      "id": 9,
+      "id": "9",
       "name": "Essence Mascara Lash Princess",
       "category": "Beauty",
       "brand": "Essence",
@@ -82,7 +82,7 @@
       "image": "https://cdn.dummyjson.com/products/images/beauty/Essence%20Mascara%20Lash%20Princess/thumbnail.png"
     },
     {
-      "id": 10,
+      "id": "10",
       "name": "Eyeshadow Palette with Mirror",
       "category": "Beauty",
       "brand": "Glamour Beauty",
@@ -91,7 +91,7 @@
       "image": "https://cdn.dummyjson.com/products/images/beauty/Eyeshadow%20Palette%20with%20Mirror/thumbnail.png"
     },
     {
-      "id": 11,
+      "id": "11",
       "name": "Powder Canister",
       "category": "Beauty",
       "brand": "L'Oreal",
@@ -100,7 +100,7 @@
       "image": "https://cdn.dummyjson.com/products/images/beauty/Powder%20Canister/thumbnail.png"
     },
     {
-      "id": 12,
+      "id": "12",
       "name": "Red Lipstick",
       "category": "Beauty",
       "brand": "MAC",
@@ -109,7 +109,7 @@
       "image": "https://cdn.dummyjson.com/products/images/beauty/Red%20Lipstick/thumbnail.png"
     },
     {
-      "id": 13,
+      "id": "13",
       "name": "Kids' Building Blocks Set",
       "category": "Kids",
       "brand": "LEGO",
@@ -118,7 +118,7 @@
       "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Lego%20bricks.jpg?width=800"
     },
     {
-      "id": 14,
+      "id": "14",
       "name": "Children's Backpack",
       "category": "Kids",
       "brand": "Smiggle",
@@ -127,7 +127,7 @@
       "image": "https://commons.wikimedia.org/wiki/Special:FilePath/School%20bag%20backpack.jpg?width=800"
     },
     {
-      "id": 15,
+      "id": "15",
       "name": "Kids' Electric Scooter",
       "category": "Kids",
       "brand": "Micro",
@@ -136,7 +136,7 @@
       "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Boy%20on%20electric%20scooter%205988226382%20e289654724%20z.jpg?width=800"
     },
     {
-      "id": 16,
+      "id": "16",
       "name": "Children's Story Books Set",
       "category": "Kids",
       "brand": "Penguin Random House",
@@ -145,7 +145,7 @@
       "image": "https://commons.wikimedia.org/wiki/Special:FilePath/ASC%20Leiden%20-%20Rwanda%202021%20-%20106%20-%20Children%27s%20books%20-%20Kigali.jpg?width=800"
     },
     {
-      "id": 17,
+      "id": "17",
       "name": "Samsung Galaxy S23",
       "category": "Phones",
       "brand": "Samsung",
@@ -154,7 +154,7 @@
       "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Galaxy%20S23.png?width=800"
     },
     {
-      "id": 18,
+      "id": "18",
       "name": "iPhone 15 Pro",
       "category": "Phones",
       "brand": "Apple",
@@ -163,7 +163,7 @@
       "image": "https://commons.wikimedia.org/wiki/Special:FilePath/IPhone%2015%20pro.png?width=800"
     },
     {
-      "id": 19,
+      "id": "19",
       "name": "Google Pixel 8",
       "category": "Phones",
       "brand": "Google",
@@ -172,7 +172,7 @@
       "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Google%20Pixel%208%20Rose%20front.jpg?width=800"
     },
     {
-      "id": 20,
+      "id": "20",
       "name": "Huawei Nova 11",
       "category": "Phones",
       "brand": "Huawei",
@@ -181,7 +181,7 @@
       "image": "https://www.gsmarena.com.bd/images/products/Huawei-Nova-11.jpg"
     },
     {
-      "id": 21,
+      "id": "21",
       "name": "Apple Watch Series 9",
       "category": "Watch",
       "brand": "Apple",
@@ -190,7 +190,7 @@
       "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Apple%20Watch%20Series%209%201%202023-11-14.jpg?width=800"
     },
     {
-      "id": 22,
+      "id": "22",
       "name": "Rolex Submariner",
       "category": "Watch",
       "brand": "Rolex",
@@ -199,7 +199,7 @@
       "image": "https://cdn.dummyjson.com/products/images/mens-watches/Rolex%20Submariner%20Watch/thumbnail.png"
     },
     {
-      "id": 23,
+      "id": "23",
       "name": "Samsung Galaxy Watch 6",
       "category": "Watch",
       "brand": "Samsung",
@@ -208,7 +208,7 @@
       "image": "https://cdn.dummyjson.com/products/images/mens-watches/Brown%20Leather%20Belt%20Watch/thumbnail.png"
     },
     {
-      "id": 24,
+      "id": "24",
       "name": "Casio G-Shock",
       "category": "Watch",
       "brand": "Casio",
@@ -217,7 +217,7 @@
       "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Casio%20G-Shock%20Master%20of%20G%20Rangeman%20GW-9400J-1JF.jpg?width=800"
     },
     {
-      "id": 25,
+      "id": "25",
       "name": "Hardcover Notebook A5",
       "category": "Stationary",
       "brand": "Moleskine",
@@ -226,7 +226,7 @@
       "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Moleskine%20Ruled%20Pocket%20Notebook%20%28430657949%29.jpg?width=800"
     },
     {
-      "id": 26,
+      "id": "26",
       "name": "Ballpoint Pen Set",
       "category": "Stationary",
       "brand": "Pilot",
@@ -235,7 +235,7 @@
       "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Pentel%20RSVP%20pens.JPG?width=800"
     },
     {
-      "id": 27,
+      "id": "27",
       "name": "Watercolor Paint Set",
       "category": "Stationary",
       "brand": "Faber-Castell",
@@ -244,13 +244,28 @@
       "image": "https://cdn.dummyjson.com/products/images/beauty/Eyeshadow%20Palette%20with%20Mirror/thumbnail.png"
     },
     {
-      "id": 28,
+      "id": "28",
       "name": "Desk Organizer Set",
       "category": "Stationary",
       "brand": "IKEA",
       "description": "A stylish 5-piece bamboo desk organizer set including pen holder, paper tray, sticky note dispenser, and more.",
       "price": 34.99,
       "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Gather%2C%20The%20minimal%2C%20modular%20organizer.%20%28Unsplash%29.jpg?width=800"
+    },
+    {
+      "productName": "njhbbnn",
+      "description": "njkbjnjnn",
+      "imageUrl": "https://www.ilovepdf.com/jpg_to_pdf",
+      "price": 99890,
+      "id": "dlSbWwbUeIY"
+    },
+    {
+      "name": "gnbnn",
+      "description": "bjhbhhbgg",
+      "image": "https://www.google.com/imgres?q=image%20to%20pdf&imgurl=https%3A%2F%2Fwww.ilovepdf.com%2Fimg%2Filovepdf%2Fsocial%2Fen-US%2Fimagepdf.png&imgrefurl=https%3A%2F%2Fwww.ilovepdf.com%2Fjpg_to_pdf&docid=ZFXNpLCzg1-bHM&tbnid=CC3mkMp08evUIM&vet=12ahUKEwiluPCFkLiUAxX29wIHHVG5ASgQnPAOegQIExAB..i&w=1200&h=717&hcb=2&ved=2ahUKEwiluPCFkLiUAxX29wIHHVG5ASgQnPAOegQIExAB",
+      "price": 9876,
+      "id": "74qD4PlIekI"
     }
-  ]
+  ],
+  "$schema": "./node_modules/json-server/schema.json"
 }
