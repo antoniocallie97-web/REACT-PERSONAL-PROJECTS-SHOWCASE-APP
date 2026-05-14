@@ -36,7 +36,7 @@ function Forms({ onAdd }) {
       setImageUrl('')
       setPrice('')
       setCategory('')
-      brand('')
+      setBrand('')
     })
   }
 
