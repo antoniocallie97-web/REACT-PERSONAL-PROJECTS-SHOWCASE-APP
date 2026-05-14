@@ -109,82 +109,6 @@
     transform: rotate(360deg);
   }
 }
-
-/* Admin product form layout. */
-.forms {
-  max-width: 720px;
-  margin: 0 auto 16px;
-  padding: 0 24px 16px;
-  text-align: left;
-}
-
-.forms h2 {
-  margin-bottom: 16px;
-}
-
-.forms form {
-  /* Keep admin labels and fields aligned in two clear columns. */
-  display: grid;
-  grid-template-columns: minmax(140px, 180px) minmax(0, 1fr);
-  align-items: center;
-  gap: 14px 18px;
-  box-sizing: border-box;
-  border: 1px solid var(--border);
-  border-radius: 8px;
-  padding: 20px;
-  background: var(--bg);
-  box-shadow: 0 10px 28px rgba(8, 6, 13, 0.06);
-}
-
-.forms label {
-  color: var(--text-h);
-  font-size: 15px;
-  font-weight: 600;
-}
-
-.forms input,
-.forms textarea {
-  width: 100%;
-  min-height: 42px;
-  box-sizing: border-box;
-  border: 1px solid var(--border);
-  border-radius: 6px;
-  padding: 9px 12px;
-  color: var(--text-h);
-  background: var(--bg);
-  font: inherit;
-  font-size: 15px;
-}
-
-.forms textarea {
-  min-height: 104px;
-  resize: vertical;
-}
-
-.forms input:focus,
-.forms textarea:focus {
-  border-color: var(--accent);
-  outline: 2px solid var(--accent-bg);
-}
-
-.forms button {
-  grid-column: 2;
-  justify-self: start;
-  min-height: 42px;
-  border: 0;
-  border-radius: 6px;
-  padding: 9px 18px;
-  color: #fff;
-  background: #08060d;
-  font: inherit;
-  font-size: 15px;
-  cursor: pointer;
-}
-
-.forms button:hover {
-  background: #30313a;
-}
-
 /* Search and filter toolbar shared by Shop and Admin. */
 .search-wrapper {
   display: flex;
@@ -367,16 +291,6 @@
 
 /* Stack controls and cart rows on smaller screens. */
 @media (max-width: 720px) {
-  .forms form {
-    /* Stack the form on small screens so fields stay readable. */
-    grid-template-columns: 1fr;
-  }
-
-  .forms button {
-    grid-column: 1;
-    width: 100%;
-  }
-
   .search-wrapper {
     display: grid;
     grid-template-columns: 1fr;
@@ -434,15 +348,6 @@
   .search-button:hover {
     background: #d1d5db;
   }
-
-  .forms button {
-    background: #f3f4f6;
-    color: #08060d;
-  }
-
-  .forms button:hover {
-    background: #d1d5db;
-  }
 }
 
 /* ProductPage.css */
@@ -459,7 +364,7 @@
 [data-theme='light'] {
   --bg-gradient: linear-gradient(135deg, #fce4ec 0%, #ffe0b2 100%);
   --card-bg: rgba(255, 255, 255, 0.8);
-  --text-color: #2D0B5A;
+  --text-color: #020905;
   --accent: #e65100;
 }
 
@@ -517,11 +422,10 @@ body {
   font-weight: bold;
 }
 
-
-/* NAVBAR STYLES */
+/* NAVBAR 
 /* Color Palette & Themes */
 :root[data-theme='dark'] {
-  --bg-color: #1a0633; /* Deep Violet */
+  --bg-color: #0a0313; /* Deep Violet */
   --nav-bg: rgba(26, 6, 51, 0.85);
   --text-primary: #ffffff;
   --accent: #FF8C00; /* Orange */

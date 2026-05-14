@@ -130,14 +130,14 @@ function LandingPage() {
       <section className="sp-hero">
         <div className="sp-tag">
           <div className="sp-tag-dot" />
-          Admin Portal — React SPA
+          E-commerce App — React SPA
         </div>
  
         <h1>Welcome To<br /><em>AuRevia</em></h1>
  
-        <p className="sp-sub">
-          One portal to manage your entire product catalogue — add listings,
-          adjust prices, and search everything instantly.
+        <p className="sp-sub" style={{ color: 'var(--text-hero)' }}>
+          This is the no.1 e-commerce app 
+          where we put the 'Why Not' in Shopping.
         </p>
  
         <div className="sp-btns">
@@ -147,7 +147,7 @@ function LandingPage() {
           </button>
  
           {/* ← FIX: goes to /shop */}
-          <button className="btn-b" onClick={() => navigate("/shop")}>
+          <button className="btn-b" onClick={() => navigate("/shop")} style={{ color: 'var(--text-hero)' }}>
             Browse Products
           </button>
         </div>
@@ -155,27 +155,14 @@ function LandingPage() {
  
       {/* ── CTA SECTION ── */}
       <div className="sp-cta">
-        <h2>Ready to take control?</h2>
-        <p>Everything your store needs is one click away.</p>
+        <h2>Ready to take control? Everything your App needs is one click away.</h2>
  
-        {/* ← FIX: goes to /admin */}
-        <button
-          className="btn-a"
-          style={{ fontSize: "1rem", padding: "0.9rem 2.2rem" }}
-          onClick={() => navigate("/admin")}
-        >
-          Enter Admin Portal →
-        </button>
       </div>
  
       {/* ── FOOTER ── */}
       <footer className="sp-footer">
-        <div className="sp-footer-copy">© 2025 AuRevia — React Admin Portal</div>
+        <div className="sp-footer-copy" style={{ color: 'var(--text-hero)' }}>© 2026 AuRevia — React Admin Portal</div>
         <ul className="sp-footer-links">
-          {/* ← FIX: footer Shop link also navigates */}
-          <li>
-            <button onClick={() => navigate("/shop")}>Shop</button>
-          </li>
         </ul>
       </footer>
     </div>
