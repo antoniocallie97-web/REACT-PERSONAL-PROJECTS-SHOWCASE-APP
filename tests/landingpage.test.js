@@ -1,6 +1,6 @@
 const css = `
   @import url('https://fonts.googleapis.com/css2?family=Syne:wght@700;800&family=DM+Sans:wght@300;400;500&display=swap');
- 
+
   :root {
     --bg:    #020b18;
     --blue1: #0369a1;
@@ -9,23 +9,23 @@ const css = `
     --white: #f0f9ff;
     --glow:  rgba(14,165,233,0.25);
   }
- 
+
   *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
- 
+
   body {
     background: var(--bg);
     color: var(--white);
     font-family: 'DM Sans', sans-serif;
     overflow-x: hidden;
   }
- 
+
   #star-canvas {
     position: fixed;
     inset: 0;
     z-index: 0;
     pointer-events: none;
   }
- 
+
   .sp-nav {
     position: fixed; top: 0; left: 0; right: 0; z-index: 50;
     display: flex; justify-content: space-between; align-items: center;
@@ -40,7 +40,7 @@ const css = `
   }
   .sp-logo span { color: var(--blue2); }
   .sp-links { display: flex; gap: 2rem; list-style: none; }
- 
+
   /* Nav link styled as a button so it sits inside <li> cleanly */
   .sp-links button {
     background: none; border: none; padding: 0;
@@ -49,7 +49,7 @@ const css = `
     transition: opacity 0.2s;
   }
   .sp-links button:hover { opacity: 1; }
- 
+
   .sp-btn {
     background: var(--blue2); color: #fff; border: none; border-radius: 8px;
     padding: 0.5rem 1.3rem; font-size: 0.88rem; font-weight: 600; cursor: pointer;
@@ -57,7 +57,7 @@ const css = `
     transition: transform 0.15s;
   }
   .sp-btn:hover { transform: translateY(-1px); }
- 
+
   .sp-hero {
     position: relative; z-index: 1;
     min-height: 100vh;
@@ -124,7 +124,7 @@ const css = `
     transition: border-color 0.2s, transform 0.15s;
   }
   .btn-b:hover { border-color: var(--blue2); transform: translateY(-2px); }
- 
+
   .sp-cta {
     position: relative; z-index: 1;
     text-align: center; padding: 6rem 2rem;
@@ -136,7 +136,7 @@ const css = `
     font-weight: 800; letter-spacing: -0.025em; margin-bottom: 0.8rem;
   }
   .sp-cta p { color: var(--ice); opacity: 0.8; margin-bottom: 2rem; font-weight: 300; }
- 
+
   .sp-footer {
     position: relative; z-index: 1;
     border-top: 1px solid rgba(14,165,233,0.1);
@@ -153,12 +153,12 @@ const css = `
     transition: color 0.2s;
   }
   .sp-footer-links button:hover { color: var(--ice); }
- 
+
   @keyframes up {
     from { opacity: 0; transform: translateY(16px); }
     to   { opacity: 1; transform: translateY(0); }
   }
- 
+
   @media (max-width: 768px) {
     .sp-nav { padding: 1rem 1.5rem; }
     .sp-links { display: none; }
@@ -167,4 +167,4 @@ const css = `
 `;
 
 export default css;
- 
+

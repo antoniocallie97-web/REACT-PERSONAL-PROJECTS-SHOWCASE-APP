@@ -1,3 +1,4 @@
+
 import { useState } from 'react'
 
 function Forms({ onAdd }) {
@@ -40,6 +41,7 @@ function Forms({ onAdd }) {
     })
   }
 
+  
   return (
       <div className="forms">
         <h2>Add New Product</h2>
