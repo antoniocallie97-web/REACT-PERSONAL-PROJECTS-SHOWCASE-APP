@@ -288,6 +288,7 @@
       "price": 299.99,
       "category": "Smartwatch",
       "id": "ZNrbe_BZYks"
+<<<<<<< HEAD
     },
     {
       "name": "Apple Watch Series",
@@ -306,6 +307,8 @@
       "category": "Watch",
       "brand": "Apple",
       "id": "XhFH_1gvAGw"
+=======
+>>>>>>> 0218eab52837151d72da2ac680fa9774f6c0c133
     }
   ],
   "$schema": "./node_modules/json-server/schema.json"
