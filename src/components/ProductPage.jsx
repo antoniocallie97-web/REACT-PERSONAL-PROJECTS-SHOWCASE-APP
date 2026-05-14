@@ -24,7 +24,7 @@ function ProductCard({ product, onAddToCart }) {
   };
 
   return (
-    <div className="product-card">
+    <div className="product-card" style={{ background: 'var(--card-bg)', padding: '15px', borderRadius: '12px' }}>
       <div className="product-image-wrap">
         {!imageLoaded && (
           <div className="image-loader" aria-label="Loading product image">
@@ -45,9 +45,13 @@ function ProductCard({ product, onAddToCart }) {
       <div className="product-info">
         <h2>{product.name}</h2>
 
-        <p className="product-category">{product.category}</p>
+        <p className="product-category" style={{ color: 'var(--text-description)', fontSize: '0.9rem' }}>
+          {product.category}
+        </p>
 
-        <p className="product-brand">Brand: {product.brand}</p>
+        <p className="product-brand" style={{ color: 'var(--text-description)', fontSize: '0.9rem' }}>
+          Brand: {product.brand}
+        </p>
 
         <p className="product-price">
           ${product.price}

@@ -19,7 +19,7 @@ function Cart({ items = [], onUpdateQuantity, onRemoveItem, onClearCart }) {
   return (
     <section className="cart-page">
       <div className="cart-header">
-        <h1>Your Cart</h1>
+        <h1>Your Cart</h1> 
         <button className="cart-clear-button" type="button" onClick={onClearCart}>
           Clear Cart
         </button>
@@ -34,6 +34,7 @@ function Cart({ items = [], onUpdateQuantity, onRemoveItem, onClearCart }) {
               <h2>{item.name}</h2>
               <p>{item.category}</p>
               <strong>${item.price}</strong>
+              
             </div>
 
             {/* Setting quantity below 1 removes the item in App.jsx. */}
