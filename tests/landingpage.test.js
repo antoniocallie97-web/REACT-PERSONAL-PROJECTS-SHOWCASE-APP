@@ -165,4 +165,6 @@ const css = `
     .sp-footer { padding: 1.5rem; flex-direction: column; text-align: center; }
   }
 `;
+
+export default css;
  

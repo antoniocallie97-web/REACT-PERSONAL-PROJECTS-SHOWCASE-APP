@@ -42,7 +42,7 @@ return (
 
       {/* 3. Right Section: Utils */}
       <div className="nav-utils">
-        <span className="cart-count">Cart (0)</span>
+        {showCartLink && <span className="cart-count">Cart ({cartCount})</span>}
         <button className="theme-toggle" onClick={toggleTheme}>
           {theme === 'dark' ? '☀️ Light' : '🌙 Dark'}
         </button>
