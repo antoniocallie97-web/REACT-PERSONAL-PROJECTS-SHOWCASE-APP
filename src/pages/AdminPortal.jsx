@@ -7,6 +7,7 @@ import SearchBar from "../components/SearchBar";
 function AdminPortal() {
   const [products, setProducts] = useState([]);
   const [filteredProducts, setFilteredProducts] = useState([]);
+  const [editingProduct, setEditingProduct] = useState(null);
 
   useEffect(() => {
     // Keep a master list plus a filtered list so admin filters do not lose data.
@@ -32,6 +33,7 @@ function AdminPortal() {
     setFilteredProducts((prev) =>
       prev.map((p) => (p.id === updatedProduct.id ? updatedProduct : p))
     );
+    setEditingProduct(null); // Close edit form
   }
 
   // DELETE=> Called by ProductPage when admin deletes a product
@@ -42,7 +44,14 @@ function AdminPortal() {
 
   return (
     <div>
-      <FormPage onAdd={handleAddProduct} />
+      {!editingProduct && <FormPage onAdd={handleAddProduct} />}
+      {editingProduct && (
+        <FormPage
+          isEditing={true}
+          initialProduct={editingProduct}
+          onUpdate={handleUpdateProduct}
+        />
+      )}
       {/* Admin mode swaps price filters for stock/status filters. */}
       <SearchBar
         products={products}
@@ -50,13 +59,12 @@ function AdminPortal() {
         filterMode="admin"
       />
       <div className="grid-container">
-
         {filteredProducts.map((product) => (
           <ProductPage
             key={product.id}
             product={product}
             isAdmin={true}
-            onUpdate={handleUpdateProduct}
+            onEdit={(prod) => setEditingProduct(prod)}
             onDelete={handleDeleteProduct}
           />
         ))}
