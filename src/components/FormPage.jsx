@@ -1,6 +1,6 @@
-import React, { useState } from 'react'
+import { useState } from 'react'
 
-function Forms() {
+function Forms({ onAdd }) {
   const [productName, setProductName] = useState('')
   const [description, setDescription] = useState('')
   const [imageUrl, setImageUrl] = useState('')
@@ -9,10 +9,11 @@ function Forms() {
   const handleSubmit = (e) => {
     e.preventDefault()
 
+    // Match the product fields used by ProductPage and SearchBar.
     const newProduct = {
-      productName,
+      name: productName,
       description,
-      imageUrl,
+      image: imageUrl,
       price: Number(price)
     }
 
@@ -20,13 +21,16 @@ function Forms() {
       method: 'POST',
       headers: { 'Content-Type': 'application/json' },
       body: JSON.stringify(newProduct)
-    }).then(() => {
+    })
+    .then((response) => response.json())
+    .then((savedProduct) => {
       console.log("Product added successfully")
+      // Update the admin list immediately after JSON Server saves the product.
+      onAdd?.(savedProduct)
       setProductName('')
       setDescription('')
       setImageUrl('')
       setPrice('')
-
     })
   }
 
