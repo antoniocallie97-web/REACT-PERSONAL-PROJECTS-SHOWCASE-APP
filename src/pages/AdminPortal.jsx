@@ -3,6 +3,7 @@ import FormPage from "../components/FormPage";
 import ProductPage from "../components/ProductPage";
 import SearchBar from "../components/SearchBar";
 
+
 function AdminPortal() {
   const [products, setProducts] = useState([]);
   const [filteredProducts, setFilteredProducts] = useState([]);
@@ -41,7 +42,6 @@ function AdminPortal() {
 
   return (
     <div>
-      <h1>Admin Portal</h1>
       <FormPage onAdd={handleAddProduct} />
       {/* Admin mode swaps price filters for stock/status filters. */}
       <SearchBar
@@ -49,7 +49,8 @@ function AdminPortal() {
         onFilter={setFilteredProducts}
         filterMode="admin"
       />
-      <div className="product-grid">
+      <div className="grid-container">
+
         {filteredProducts.map((product) => (
           <ProductPage
             key={product.id}

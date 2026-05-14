@@ -1,5 +1,7 @@
+
 import { useEffect, useState } from "react";
 import Editcard from "./Editcard";
+
 
 function getFallbackImage(product) {
   // Use a generated placeholder if a product image URL fails or is missing.

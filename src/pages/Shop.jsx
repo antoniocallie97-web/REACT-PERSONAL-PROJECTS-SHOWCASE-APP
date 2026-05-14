@@ -2,6 +2,7 @@ import { useState, useEffect } from "react";
 import ProductPage from "../components/ProductPage";
 import SearchBar from "../components/SearchBar";
 
+// Incoming code from main branch
 function Shop({ onAddToCart }) {
   const [products, setProducts] = useState([]);
   const [filteredProducts, setFilteredProducts] = useState([]);
@@ -17,10 +18,12 @@ function Shop({ onAddToCart }) {
   }, []);
 
   return (
+
     <div>
       {/* Shop uses the default price filters. */}
       <SearchBar products={products} onFilter={setFilteredProducts} />
-      <div className="product-grid">
+      <div className="grid-container">
+        
         {filteredProducts.map((product) => (
           <ProductPage
             key={product.id}
@@ -32,5 +35,5 @@ function Shop({ onAddToCart }) {
     </div>
   );
 }
-
 export default Shop;
+

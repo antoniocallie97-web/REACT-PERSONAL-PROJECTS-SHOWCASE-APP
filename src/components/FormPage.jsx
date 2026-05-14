@@ -5,6 +5,8 @@ function Forms({ onAdd }) {
   const [description, setDescription] = useState('')
   const [imageUrl, setImageUrl] = useState('')
   const [price, setPrice] = useState('')
+  const [category, setCategory] = useState('')
+  const [brand, setBrand] = useState('')
 
   const handleSubmit = (e) => {
     e.preventDefault()
@@ -14,7 +16,9 @@ function Forms({ onAdd }) {
       name: productName,
       description,
       image: imageUrl,
-      price: Number(price)
+      price: Number(price),
+      category: category,
+      brand: brand
     }
 
     fetch("http://localhost:3001/products", {
@@ -31,6 +35,8 @@ function Forms({ onAdd }) {
       setDescription('')
       setImageUrl('')
       setPrice('')
+      setCategory('')
+      setBrand('')
     })
   }
 
@@ -45,6 +51,24 @@ function Forms({ onAdd }) {
             required
             value={productName}
             onChange={(e) => setProductName(e.target.value)}
+          />
+
+          <label>Category</label>
+          <input 
+            type="text" 
+            placeholder="Enter product category"
+            required
+            value={category}
+            onChange={(e) => setCategory(e.target.value)}
+          />
+
+          <label>Brand</label>
+          <input 
+            type="text" 
+            placeholder="Enter product brand"
+            required
+            value={brand}
+            onChange={(e) => setBrand(e.target.value)}
           />
 
           <label>Description</label>
