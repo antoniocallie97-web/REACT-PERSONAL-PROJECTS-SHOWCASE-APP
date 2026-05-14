@@ -17,7 +17,8 @@ function Forms({ onAdd }) {
       description,
       image: imageUrl,
       price: Number(price),
-      category: category
+      category: category,
+      brand: brand
     }
 
     fetch("http://localhost:3001/products", {
@@ -35,6 +36,7 @@ function Forms({ onAdd }) {
       setImageUrl('')
       setPrice('')
       setCategory('')
+      brand('')
     })
   }
 
