@@ -104,6 +104,48 @@
   background: #30313a;
 }
 
+.admin-buttons {
+  display: flex;
+  gap: 10px;
+  margin-top: 14px;
+}
+
+.admin-edit-button,
+.admin-delete-button {
+  flex: 1;
+  min-height: 40px;
+  border: 1px solid transparent;
+  border-radius: 6px;
+  padding: 10px 12px;
+  font: inherit;
+  font-size: 14px;
+  cursor: pointer;
+  transition: transform 0.15s ease, background 0.2s ease, border-color 0.2s ease;
+}
+
+.admin-edit-button {
+  color: #fff;
+  background: #2563eb;
+}
+
+.admin-delete-button {
+  color: #fff;
+  background: #dc2626;
+}
+
+.admin-edit-button:hover,
+.admin-delete-button:hover {
+  transform: translateY(-1px);
+}
+
+.admin-edit-button:hover {
+  background: #1d4ed8;
+}
+
+.admin-delete-button:hover {
+  background: #b91c1c;
+}
+
 @keyframes image-spin {
   to {
     transform: rotate(360deg);
@@ -403,7 +445,9 @@ body {
   transition: var(--accent);
 }
 
-.nav-links a:hover { color: var(--accent); }
+.nav-links a:hover {
+  color: var(--accent);
+}
 
 .grid-container {
   display: grid;
@@ -425,10 +469,10 @@ body {
 /* NAVBAR 
 /* Color Palette & Themes */
 :root[data-theme='dark'] {
-  --bg-color: #0a0313; /* Deep Violet */
   --nav-bg: rgba(26, 6, 51, 0.85);
   --text-primary: #ffffff;
-  --accent: #FF8C00; /* Orange */
+  --accent: #FF8C00;
+  /* Orange */
   --glass: rgba(255, 255, 255, 0.05);
 }
 
@@ -449,7 +493,8 @@ body {
 /* Navbar Layout */
 .navbar-container {
   display: grid;
-  grid-template-columns: 1fr 2fr 1fr; /* Creates 3 equal zones */
+  grid-template-columns: 1fr 2fr 1fr;
+  /* Creates 3 equal zones */
   align-items: center;
   padding: 0 5%;
   height: 80px;
@@ -474,7 +519,8 @@ body {
 .nav-menu {
   display: flex;
   justify-content: center;
-  gap: 40px; /* Space between Home, Shop, Admin */
+  gap: 40px;
+  /* Space between Home, Shop, Admin */
 }
 
 .nav-link {

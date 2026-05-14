@@ -9,7 +9,7 @@ function getFallbackImage(product) {
   return `https://dummyjson.com/image/420x300/e5e7eb/111827?text=${label}`;
 }
 
-function ProductCard({ product, onAddToCart, isAdmin, onUpdate, onDelete }) {
+function ProductCard({ product, onAddToCart, isAdmin, onEdit, onDelete }) {
   const fallbackImage = getFallbackImage(product);
   const [imageSrc, setImageSrc] = useState(product.image || fallbackImage);
   const [imageLoaded, setImageLoaded] = useState(false);
@@ -31,13 +31,13 @@ function ProductCard({ product, onAddToCart, isAdmin, onUpdate, onDelete }) {
       fetch(`http://localhost:3001/products/${product.id}`, {
         method: 'DELETE'
       })
-      .then((response) => {
-        if (response.ok) {
-          console.log("Product deleted successfully")
-          onDelete?.(product.id)
-        }
-      })
-      .catch((error) => console.error("Delete failed:", error))
+        .then((response) => {
+          if (response.ok) {
+            console.log("Product deleted successfully")
+            onDelete?.(product.id)
+          }
+        })
+        .catch((error) => console.error("Delete failed:", error))
     }
   }
 
@@ -93,14 +93,14 @@ function ProductCard({ product, onAddToCart, isAdmin, onUpdate, onDelete }) {
           <div className="admin-buttons">
             <button
               className="admin-edit-button"
-              onClick={() => setIsEditing(true)}
+              onClick={() => onEdit(product)}
               type="button"
             >
               Edit
             </button>
             <button
               className="admin-delete-button"
-              onClick={handleDelete}
+              onClick={() => onDelete(product.id)}
               type="button"
             >
               Delete
@@ -112,7 +112,7 @@ function ProductCard({ product, onAddToCart, isAdmin, onUpdate, onDelete }) {
   );
 }
 
-function ProductPage({ product, onAddToCart }) {
+function ProductPage({ product, onAddToCart, isAdmin, onEdit, onDelete }) {
   const [products, setProducts] = useState([]);
   const [error, setError] = useState("");
 
@@ -135,6 +135,9 @@ function ProductPage({ product, onAddToCart }) {
         key={`${product.id}-${product.image}`}
         product={product}
         onAddToCart={onAddToCart}
+        isAdmin={isAdmin}
+        onEdit={onEdit}
+        onDelete={onDelete}
       />
     );
   }
@@ -150,6 +153,9 @@ function ProductPage({ product, onAddToCart }) {
           key={`${product.id}-${product.image}`}
           product={product}
           onAddToCart={onAddToCart}
+          isAdmin={isAdmin}
+          onEdit={onEdit}
+          onDelete={onDelete}
         />
       ))}
     </div>
