@@ -1,4 +1,5 @@
 import { useEffect, useState } from "react";
+import Editcard from "./Editcard";
 
 function getFallbackImage(product) {
   // Use a generated placeholder if a product image URL fails or is missing.
@@ -6,10 +7,11 @@ function getFallbackImage(product) {
   return `https://dummyjson.com/image/420x300/e5e7eb/111827?text=${label}`;
 }
 
-function ProductCard({ product, onAddToCart }) {
+function ProductCard({ product, onAddToCart, isAdmin, onUpdate, onDelete }) {
   const fallbackImage = getFallbackImage(product);
   const [imageSrc, setImageSrc] = useState(product.image || fallbackImage);
   const [imageLoaded, setImageLoaded] = useState(false);
+  const [isEditing, setIsEditing] = useState(false);
 
   const handleImageError = () => {
     // Try the fallback once, then stop showing the loader.
@@ -21,6 +23,25 @@ function ProductCard({ product, onAddToCart }) {
 
     setImageLoaded(true);
   };
+
+  const handleDelete = () => {
+    if (confirm(`Are you sure you want to delete "${product.name}"?`)) {
+      fetch(`http://localhost:3001/products/${product.id}`, {
+        method: 'DELETE'
+      })
+      .then((response) => {
+        if (response.ok) {
+          console.log("Product deleted successfully")
+          onDelete?.(product.id)
+        }
+      })
+      .catch((error) => console.error("Delete failed:", error))
+    }
+  }
+
+  if (isEditing) {
+    return <Editcard product={product} onUpdate={onUpdate} onCancel={() => setIsEditing(false)} />
+  }
 
   return (
     <div className="product-card">
@@ -52,7 +73,7 @@ function ProductCard({ product, onAddToCart }) {
           ${product.price}
         </p>
 
-        {onAddToCart && (
+        {onAddToCart && !isAdmin && (
           <button
             className="product-button"
             onClick={() => onAddToCart(product)}
@@ -60,6 +81,25 @@ function ProductCard({ product, onAddToCart }) {
           >
             Add to Cart
           </button>
+        )}
+
+        {isAdmin && (
+          <div className="admin-buttons">
+            <button
+              className="admin-edit-button"
+              onClick={() => setIsEditing(true)}
+              type="button"
+            >
+              Edit
+            </button>
+            <button
+              className="admin-delete-button"
+              onClick={handleDelete}
+              type="button"
+            >
+              Delete
+            </button>
+          </div>
         )}
       </div>
     </div>
