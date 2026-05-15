@@ -42,14 +42,20 @@ function AdminPortal() {
     setFilteredProducts((prev) => prev.filter((p) => p.id !== id));
   }
 
+  function handleCancelEdit() {
+    setEditingProduct(null);
+  }
+
   return (
     <div>
       {!editingProduct && <FormPage onAdd={handleAddProduct} />}
       {editingProduct && (
         <FormPage
+          key={editingProduct.id}
           isEditing={true}
           initialProduct={editingProduct}
           onUpdate={handleUpdateProduct}
+          onCancel={handleCancelEdit}
         />
       )}
       {/* Admin mode swaps price filters for stock/status filters. */}

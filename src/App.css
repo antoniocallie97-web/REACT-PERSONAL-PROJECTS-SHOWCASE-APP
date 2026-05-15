@@ -151,6 +151,7 @@
     transform: rotate(360deg);
   }
 }
+
 /* Search and filter toolbar shared by Shop and Admin. */
 .search-wrapper {
   display: flex;
@@ -219,6 +220,117 @@
 
 .search-button:hover {
   background: #30313a;
+}
+
+.forms {
+  max-width: 760px;
+  margin: 24px auto;
+  padding: 28px;
+  border: 1px solid var(--border);
+  border-radius: 16px;
+  background: var(--bg);
+  box-shadow: 0 18px 40px rgba(8, 6, 13, 0.08);
+}
+
+.forms h2 {
+  margin: 0 0 18px;
+  font-size: 22px;
+  color: var(--text-h);
+}
+
+.forms form {
+  display: grid;
+  gap: 16px;
+  grid-template-columns: 1fr;
+}
+
+.form-field {
+  display: grid;
+  gap: 8px;
+}
+
+.form-field-full {
+  grid-column: 1 / -1;
+}
+
+@media (min-width: 980px) {
+  .forms form {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .form-field-full {
+    grid-column: 1 / -1;
+  }
+}
+
+.forms label {
+  display: block;
+  font-size: 14px;
+  color: var(--text);
+  margin-bottom: 6px;
+}
+
+.forms input,
+.forms textarea {
+  width: 100%;
+  min-height: 44px;
+  box-sizing: border-box;
+  border: 1px solid var(--border);
+  border-radius: 10px;
+  padding: 12px 14px;
+  color: var(--text);
+  background: var(--bg);
+  font: inherit;
+  font-size: 15px;
+  transition: border-color 0.2s ease, outline 0.2s ease;
+}
+
+.forms textarea {
+  min-height: 120px;
+  resize: vertical;
+}
+
+.forms input:focus,
+.forms textarea:focus {
+  border-color: var(--accent);
+  outline: 2px solid var(--accent-bg);
+}
+
+.form-buttons {
+  display: flex;
+  gap: 12px;
+  flex-wrap: wrap;
+  align-items: center;
+}
+
+.forms button,
+.form-cancel-button {
+  min-height: 44px;
+  border: 0;
+  border-radius: 10px;
+  padding: 12px 18px;
+  font: inherit;
+  font-size: 15px;
+  cursor: pointer;
+}
+
+.forms button {
+  color: #fff;
+  background: #08060d;
+}
+
+.forms button:hover {
+  background: #30313a;
+}
+
+.form-cancel-button {
+  background: transparent;
+  border: 1px solid var(--border);
+  color: var(--text);
+}
+
+.form-cancel-button:hover {
+  background: var(--glass);
 }
 
 .notification-message {
@@ -479,6 +591,7 @@ body {
 /* NAVBAR 
 /* Color Palette & Themes */
 :root[data-theme='dark'] {
+  --bg-color: #120b22;
   --nav-bg: rgba(26, 6, 51, 0.85);
   --text-primary: #ffffff;
   --accent: #FF8C00;

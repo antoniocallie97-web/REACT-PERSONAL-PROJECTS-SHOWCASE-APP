@@ -1,6 +1,5 @@
 
 import { useEffect, useState } from "react";
-import Editcard from "./Editcard";
 
 
 function getFallbackImage(product) {
@@ -13,7 +12,6 @@ function ProductCard({ product, onAddToCart, isAdmin, onEdit, onDelete }) {
   const fallbackImage = getFallbackImage(product);
   const [imageSrc, setImageSrc] = useState(product.image || fallbackImage);
   const [imageLoaded, setImageLoaded] = useState(false);
-  const [isEditing, setIsEditing] = useState(false);
 
   const handleImageError = () => {
     // Try the fallback once, then stop showing the loader.
@@ -39,10 +37,6 @@ function ProductCard({ product, onAddToCart, isAdmin, onEdit, onDelete }) {
         })
         .catch((error) => console.error("Delete failed:", error))
     }
-  }
-
-  if (isEditing) {
-    return <Editcard product={product} onUpdate={onUpdate} onCancel={() => setIsEditing(false)} />
   }
 
   return (
