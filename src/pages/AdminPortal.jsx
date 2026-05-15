@@ -47,33 +47,47 @@ function AdminPortal() {
   }
 
   return (
-    <div>
-      {!editingProduct && <FormPage onAdd={handleAddProduct} />}
-      {editingProduct && (
-        <FormPage
-          key={editingProduct.id}
-          isEditing={true}
-          initialProduct={editingProduct}
-          onUpdate={handleUpdateProduct}
-          onCancel={handleCancelEdit}
-        />
-      )}
-      {/* Admin mode swaps price filters for stock/status filters. */}
-      <SearchBar
-        products={products}
-        onFilter={setFilteredProducts}
-        filterMode="admin"
-      />
-      <div className="grid-container">
-        {filteredProducts.map((product) => (
-          <ProductPage
-            key={product.id}
-            product={product}
-            isAdmin={true}
-            onEdit={(prod) => setEditingProduct(prod)}
-            onDelete={handleDeleteProduct}
-          />
-        ))}
+    <div className="admin-portal">
+      <header className="admin-portal-header">
+        <h1>Admin Portal</h1>
+        <p>Manage products from here. Add a new product or edit/delete existing ones.</p>
+      </header>
+
+      <div className="admin-portal-content">
+        <div className="admin-form-panel">
+          {!editingProduct && <FormPage onAdd={handleAddProduct} />}
+          {editingProduct && (
+            <FormPage
+              key={editingProduct.id}
+              isEditing={true}
+              initialProduct={editingProduct}
+              onUpdate={handleUpdateProduct}
+              onCancel={handleCancelEdit}
+            />
+          )}
+        </div>
+
+        <div className="admin-products-panel">
+          <div className="admin-products-top">
+            <SearchBar
+              products={products}
+              onFilter={setFilteredProducts}
+              filterMode="admin"
+            />
+          </div>
+
+          <div className="grid-container">
+            {filteredProducts.map((product) => (
+              <ProductPage
+                key={product.id}
+                product={product}
+                isAdmin={true}
+                onEdit={(prod) => setEditingProduct(prod)}
+                onDelete={handleDeleteProduct}
+              />
+            ))}
+          </div>
+        </div>
       </div>
     </div>
   );
