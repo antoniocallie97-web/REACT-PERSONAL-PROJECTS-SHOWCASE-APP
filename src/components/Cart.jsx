@@ -33,7 +33,7 @@ function Cart({ items = [], onUpdateQuantity, onRemoveItem, onClearCart }) {
             <div className="cart-item-details">
               <h2>{item.name}</h2>
               <p>{item.category}</p>
-              <strong>${item.price}</strong>
+              <span className="item-price">${item.price}</span>
               
             </div>
 

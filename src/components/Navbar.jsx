@@ -37,7 +37,7 @@ return (
         <Link to="/" className="nav-link">Home</Link>
         <Link to="/shop" className="nav-link">Shop</Link>
         <Link to="/admin" className="nav-link">Admin</Link>
-        {showCartLink && <Link to='/Cart'>Cart ({cartCount})</Link>}
+        <Link to="/cart" className="nav-link">Cart ({cartCount})</Link>
       </div>
 
       {/* 3. Right Section: Utils */}

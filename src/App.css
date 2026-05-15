@@ -193,7 +193,7 @@
   border: 1px solid var(--border);
   border-radius: 6px;
   padding: 9px 12px;
-  color: var(--text-h);
+  color: var(--text-on-dark) !important;
   background: var(--bg);
   font: inherit;
   font-size: 15px;
@@ -245,6 +245,7 @@
   border-radius: 8px;
   padding: 24px;
   background: var(--bg);
+  color: var(--text-on-dark);
 }
 
 .cart-items {
@@ -274,16 +275,18 @@
 .cart-item-details {
   display: grid;
   gap: 4px;
+  color: var(--text-on-dark);
 }
 
 .cart-item-details h2 {
   margin: 0;
   font-size: 17px;
+  color: var(--text-on-dark);
 }
 
 .cart-item-total {
   min-width: 80px;
-  color: var(--text-h);
+  color: var(--text-on-dark);
   font-weight: 700;
   text-align: right;
 }
@@ -301,8 +304,8 @@
 .cart-remove-button,
 .cart-clear-button {
   border: 0;
-  color: var(--text-h);
   background: var(--code-bg);
+  color: var(--text-on-dark);
   font: inherit;
   cursor: pointer;
 }
@@ -313,13 +316,14 @@
 
 .cart-quantity span {
   text-align: center;
-  color: var(--text-h);
+  color: var(--text-on-dark);
 }
 
 .cart-remove-button,
 .cart-clear-button {
   border-radius: 6px;
   padding: 8px 12px;
+  
 }
 
 .cart-summary {
@@ -327,7 +331,7 @@
   justify-content: flex-end;
   gap: 16px;
   margin-top: 20px;
-  color: var(--text-h);
+  color: var(--text-main);
   font-size: 20px;
 }
 
@@ -398,16 +402,22 @@
 :root {
   --bg-gradient: linear-gradient(135deg, #2D0B5A 0%, #FF8C00 100%);
   --card-bg: rgba(255, 255, 255, 0.1);
+  --text-main: #ffffff;
+  --text-on-dark: #ffffff;
   --text-color: #ffffff;
   --accent: #FF8C00;
   --transition: all 0.3s ease;
+  --bg: #08060d;
 }
 
 [data-theme='light'] {
   --bg-gradient: linear-gradient(135deg, #fce4ec 0%, #ffe0b2 100%);
   --card-bg: rgba(255, 255, 255, 0.8);
+  --text-main: #1a0633;     /* Dark text for light background */
+  --text-on-dark: #ffffff;
   --text-color: #020905;
   --accent: #e65100;
+  --bg: #08060d;
 }
 
 body {
@@ -519,7 +529,7 @@ body {
 .nav-menu {
   display: flex;
   justify-content: center;
-  gap: 40px;
+  gap: 30px;
   /* Space between Home, Shop, Admin */
 }
 
