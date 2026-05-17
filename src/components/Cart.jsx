@@ -1,3 +1,5 @@
+import { FaShoppingCart } from "react-icons/fa";
+
 function Cart({ items = [], onUpdateQuantity, onRemoveItem, onClearCart }) {
   // Quantity is stored on each cart item, so totals are calculated from item price.
   const subtotal = items.reduce(
@@ -8,7 +10,13 @@ function Cart({ items = [], onUpdateQuantity, onRemoveItem, onClearCart }) {
   if (items.length === 0) {
     return (
       <section className="cart-page">
-        <h1>Your Cart</h1>
+        <div className="cart-header">
+        <h1>
+            <FaShoppingCart className="cart-icon" />
+            Your Cart
+          </h1>
+        </div>
+
         <div className="cart-empty">
           <p>Your cart is empty.</p>
         </div>
@@ -19,11 +27,15 @@ function Cart({ items = [], onUpdateQuantity, onRemoveItem, onClearCart }) {
   return (
     <section className="cart-page">
       <div className="cart-header">
-        <h1>Your Cart</h1> 
+        <h1>
+            <FaShoppingCart className="cart-icon" />
+            Your Cart
+          </h1>
+          
         <button className="cart-clear-button" type="button" onClick={onClearCart}>
           Clear Cart
         </button>
-      </div>
+            </div>
 
       <div className="cart-items">
         {items.map((item) => (
