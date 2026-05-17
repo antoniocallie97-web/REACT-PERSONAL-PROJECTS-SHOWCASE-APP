@@ -79,7 +79,7 @@ function Forms({ onAdd, isEditing = false, initialProduct = {}, onUpdate, onCanc
           <label>Product Name</label>
           <input
             type="text"
-            placeholder="Enter product name"
+            placeholder="Enter Name"
             required
             value={productName}
             onChange={(e) => setProductName(e.target.value)}
@@ -90,7 +90,7 @@ function Forms({ onAdd, isEditing = false, initialProduct = {}, onUpdate, onCanc
           <label>Category</label>
           <input
             type="text"
-            placeholder="Enter product category"
+            placeholder="Enter Category"
             required
             value={category}
             onChange={(e) => setCategory(e.target.value)}
@@ -101,7 +101,7 @@ function Forms({ onAdd, isEditing = false, initialProduct = {}, onUpdate, onCanc
           <label>Brand</label>
           <input
             type="text"
-            placeholder="Enter product brand"
+            placeholder="Enter Brand"
             required
             value={brand}
             onChange={(e) => setBrand(e.target.value)}
@@ -135,7 +135,7 @@ function Forms({ onAdd, isEditing = false, initialProduct = {}, onUpdate, onCanc
           <input
             type="number"
             step={0.01}
-            placeholder="Enter product price"
+            placeholder="Enter Price"
             required
             value={price}
             onChange={(e) => setPrice(e.target.value)}

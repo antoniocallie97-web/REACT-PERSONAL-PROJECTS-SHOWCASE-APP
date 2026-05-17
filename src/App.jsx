@@ -1,9 +1,10 @@
-import { useState , useEffect } from 'react'
+import { useState, useEffect } from 'react'
 import { Routes, Route } from 'react-router-dom'
 import Navbar from './components/Navbar'
 import Shop from './pages/Shop'
 import Admin from './pages/AdminPortal'
-import LandingPage  from './components/LandingPage'
+import AdminLogin from './components/AdminLogin'
+import LandingPage from './components/LandingPage'
 import ProductPage from './components/ProductPage'
 import Cart from './components/Cart'
 import './App.css'
@@ -50,6 +51,11 @@ function App() {
   }
 
   const [theme, setTheme] = useState('dark');
+  const [isAdminAuthenticated, setIsAdminAuthenticated] = useState(false);
+
+  const handleAdminLogout = () => {
+    setIsAdminAuthenticated(false);
+  };
 
   // This effect ensures the CSS variable changes globally when 'theme' updates
   useEffect(() => {
@@ -58,26 +64,35 @@ function App() {
 
   const toggleTheme = () => setTheme(prev => (prev === 'dark' ? 'light' : 'dark'));
 
- 
+
   return (
     <>
 
       {/* Navbar only receives the count; the cart item data stays in App. */}
       <div className="app-wrapper">
 
-          <Navbar
-            theme={theme}
-            toggleTheme={toggleTheme}
-            cartCount={cartItems.reduce((total, item) => total + item.quantity, 0)}
-          />
-          <Routes>
+        <Navbar
+          theme={theme}
+          toggleTheme={toggleTheme}
+          cartCount={cartItems.reduce((total, item) => total + item.quantity, 0)}
+        />
+        <Routes>
 
-            <Route path='/' element={<LandingPage />} />
-            <Route path='/Shop' element={<Shop onAddToCart={handleAddToCart} />} />
-            <Route path='/Admin' element={<Admin />} />
-            <Route
-              path='/Cart'
-              element={
+          <Route path='/' element={<LandingPage />} />
+          <Route path='/shop' element={<Shop onAddToCart={handleAddToCart} />} />
+          <Route
+            path='/admin'
+            element={
+              isAdminAuthenticated ? (
+                <Admin onLogout={handleAdminLogout} />
+              ) : (
+                <AdminLogin onAuthenticate={() => setIsAdminAuthenticated(true)} />
+              )
+            }
+          />
+          <Route
+            path='/cart'
+            element={
               <Cart
                 items={cartItems}
                 onUpdateQuantity={handleUpdateCartItem}
@@ -85,10 +100,10 @@ function App() {
                 onClearCart={handleClearCart}
               />
             }
-            />
-            <Route path='/products' element={<ProductPage onAddToCart={handleAddToCart} />} />
-          </Routes>
-    
+          />
+          <Route path='/products' element={<ProductPage onAddToCart={handleAddToCart} />} />
+        </Routes>
+
       </div>
     </>
   )

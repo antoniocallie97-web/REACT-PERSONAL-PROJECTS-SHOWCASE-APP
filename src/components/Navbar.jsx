@@ -1,6 +1,7 @@
 import { Link, useLocation } from 'react-router-dom'
+import { AiOutlineHome, AiOutlineShop, AiOutlineSetting, AiOutlineShoppingCart } from 'react-icons/ai'
 
-function Navbar({ cartCount = 0 , theme , toggleTheme}) {
+function Navbar({ cartCount = 0, theme, toggleTheme }) {
   const location = useLocation();
   const pathname = location.pathname.toLowerCase();
   const showCartLink =
@@ -8,41 +9,36 @@ function Navbar({ cartCount = 0 , theme , toggleTheme}) {
     pathname.startsWith('/cart') ||
     pathname.startsWith('/products');
 
-//   return (
-//     <nav className="nav-bar">
-//       <h2 style={{color: 'var(--accent)'}}>AuRevia</h2>
-//       <div className='links'>
-//         <Link to='/'>Home</Link>
-//         <Link to='/Admin'>Admin</Link>
-//         <Link to='/Shop'>Shop</Link>
-//         {showCartLink && <Link to='/Cart'>Cart ({cartCount})</Link>}
-//         <button onClick={toggleTheme} className="btn-primary" style={{marginLeft: '20px'}}>
-//           {theme === 'dark' ? '☀️ Light' : '🌙 Dark'}
-//         </button>
-//       </div>
-//     </nav>
-
-//   )
-// }
-
-return (
+  return (
     <nav className="navbar-container">
       {/* 1. Left Section: Brand */}
       <div className="nav-brand">
         <Link to="/">AuRevia</Link>
       </div>
 
-      {/* 2. Center Section: Navigation (Centered & Visible) */}
+      {/* 2. Center Section: Navigation */}
       <div className="nav-menu">
-        <Link to="/" className="nav-link">Home</Link>
-        <Link to="/shop" className="nav-link">Shop</Link>
-        <Link to="/admin" className="nav-link">Admin</Link>
-        <Link to="/cart" className="nav-link">Cart ({cartCount})</Link>
+        <Link to="/" className="nav-link">
+          <AiOutlineHome /> Home
+        </Link>
+        <Link to="/shop" className="nav-link">
+          <AiOutlineShop /> Shop
+        </Link>
+        <Link to="/admin" className="nav-link">
+          <AiOutlineSetting /> Admin
+        </Link>
+        <Link to="/cart" className="nav-link">
+          <AiOutlineShoppingCart /> Cart ({cartCount})
+        </Link>
       </div>
 
       {/* 3. Right Section: Utils */}
       <div className="nav-utils">
-        {showCartLink && <span className="cart-count">Cart ({cartCount})</span>}
+        {showCartLink && (
+          <span className="cart-count">
+            <AiOutlineShoppingCart /> Cart ({cartCount})
+          </span>
+        )}
         <button className="theme-toggle" onClick={toggleTheme}>
           {theme === 'dark' ? '☀️ Light' : '🌙 Dark'}
         </button>
@@ -51,4 +47,4 @@ return (
   );
 }
 
-export default Navbar 
+export default Navbar

@@ -223,13 +223,20 @@
 }
 
 .forms {
-  max-width: 760px;
-  margin: 24px auto;
+  width: 100%;
+  margin: 0;
   padding: 28px;
   border: 1px solid var(--border);
   border-radius: 16px;
   background: var(--bg);
   box-shadow: 0 18px 40px rgba(8, 6, 13, 0.08);
+  box-sizing: border-box;
+}
+
+/* Forms used standalone (outside admin panel) */
+.forms:not(.admin-form-panel .forms) {
+  max-width: 760px;
+  margin: 24px auto;
 }
 
 .forms h2 {
@@ -328,6 +335,7 @@
   border: 1px solid var(--border);
   color: var(--text);
 }
+
 /* Admin Portal Styles   */
 .admin-portal {
   max-width: 1260px;
@@ -401,6 +409,28 @@
 }
 
 /* Cart page layout and item controls. */
+.cart-header h1 {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.cart-icon {
+  font-size: 28px;
+}
+.cart-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  padding: 20px;
+  border-radius: 20px;
+
+  background: rgba(255,255,255,0.08);
+  backdrop-filter: blur(12px);
+
+  border: 1px solid rgba(255,255,255,0.1);
+}
 .cart-page {
   padding: 24px;
   text-align: left;
@@ -532,6 +562,12 @@
     width: 72px;
   }
 
+  .cart-count {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
   .cart-quantity,
   .cart-item-total,
   .cart-remove-button {
@@ -584,9 +620,9 @@
 }
 
 [data-theme='light'] {
-  --bg-gradient: linear-gradient(135deg, #fce4ec 0%, #ffe0b2 100%);
+  --bg-gradient: linear-gradient(135deg, #a76d80 0%, #ffe0b2 100%);
   --card-bg: rgba(255, 255, 255, 0.8);
-  --text-main: #1a0633;
+  --text-main: #08020f;
   /* Dark text for light background */
   --text-on-dark: #ffffff;
   --text-color: #020905;
@@ -619,6 +655,12 @@ body {
   justify-content: space-between;
   padding: 1.5rem 5%;
   background: rgba(0, 0, 0, 0.2);
+}
+
+.nav-link {
+  display: flex;
+  align-items: center;
+  gap: 6px;
 }
 
 .nav-links a {
@@ -664,7 +706,7 @@ body {
 :root[data-theme='light'] {
   --bg-color: #f5f5f7;
   --nav-bg: rgba(255, 255, 255, 0.85);
-  --text-primary: #1a0633;
+  --text-primary: #a89bb8;
   --accent: #e65100;
   --glass: rgba(0, 0, 0, 0.05);
 }
@@ -739,3 +781,4 @@ body {
   cursor: pointer;
   font-weight: bold;
 }
+

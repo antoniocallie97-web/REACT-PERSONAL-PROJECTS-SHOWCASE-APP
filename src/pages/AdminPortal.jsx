@@ -4,7 +4,7 @@ import ProductPage from "../components/ProductPage";
 import SearchBar from "../components/SearchBar";
 
 
-function AdminPortal() {
+function AdminPortal({ onLogout }) {
   const [products, setProducts] = useState([]);
   const [filteredProducts, setFilteredProducts] = useState([]);
   const [editingProduct, setEditingProduct] = useState(null);
@@ -49,8 +49,13 @@ function AdminPortal() {
   return (
     <div className="admin-portal">
       <header className="admin-portal-header">
-        <h1>Admin Portal</h1>
-        <p>Manage products from here. Add a new product or edit/delete existing ones.</p>
+        <div>
+          <h1>Admin Portal</h1>
+          <p>Manage products from here. Add a new product or edit/delete existing ones.</p>
+        </div>
+        <button className="admin-logout-button" type="button" onClick={onLogout}>
+          Log out
+        </button>
       </header>
 
       <div className="admin-portal-content">
