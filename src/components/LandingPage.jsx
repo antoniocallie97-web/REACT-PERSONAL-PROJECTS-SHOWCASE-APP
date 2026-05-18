@@ -1,7 +1,17 @@
 import { useState, useEffect, useRef } from "react";
-import { useNavigate } from "react-router-dom";   
+import { useNavigate } from "react-router-dom";
 
-const css= '...';  // ← CSS string from tests/landingpage.test.js
+const css = `
+  /* ... all your existing styles ... */
+
+  .hero-accent {
+    background: linear-gradient(130deg, #a855f7 0%, #4ade80 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    font-style: italic;
+  }
+`;  // ← CSS string from tests/landingpage.test.js
 
 /* ── StarCanvas — live animated background ── */
 function StarCanvas() {
@@ -133,7 +143,7 @@ function LandingPage() {
           E-commerce App — React SPA
         </div>
  
-        <h1>Welcome To<br /><em>AuRevia</em></h1>
+        <h1>Welcome To<br /><span className="hero-accent">AuRevia</span></h1>
  
         <p className="sp-sub" style={{ color: 'var(--text-hero)' }}>
           This is the no.1 e-commerce app 
